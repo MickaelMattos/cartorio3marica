@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import rcpnImg from "../assets/images/RCPN.png";
 import notasImg from "../assets/images/NOTAS.png";
-import identidadeImg from "../assets/images/IDENTIDADE.png";
+import identidadeImg from "../assets/images/identidade.png";
 
 
 
