@@ -6,12 +6,12 @@ import Home from "./pages/Home";
 
 // RCPN
 import RCPN from "./pages/RCPN";
-import RcpnIndex from "./pages/rcpn/RcpnIndex";
-import Nascimento from "./pages/rcpn/Nascimento";
-import Casamento from "./pages/rcpn/Casamento";
-import Obito from "./pages/rcpn/Obito";
-import Averbacoes from "./pages/rcpn/Averbacoes";
-import Certidoes from "./pages/rcpn/Certidoes";
+import RcpnIndex from "./pages/RCPN/RcpnIndex";
+import Nascimento from "./pages/RCPN/Nascimento";
+import Casamento from "./pages/RCPN/Casamento";
+import Obito from "./pages/RCPN/Obito";
+import Averbacoes from "./pages/RCPN/Averbacoes";
+import Certidoes from "./pages/RCPN/Certidoes";
 
 // NOTAS
 import Notas from "./pages/Notas";
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
 
       {
-        path: "rcpn",
+        path: "RCPN",
         element: <RCPN />,
         children: [
           { index: true, element: <RcpnIndex /> },

@@ -149,7 +149,7 @@ const styles = {
   section: {
     marginBottom: "40px"
   },
-  title: {
+  sectiontitle: {
     fontSize: "30px",
     marginBottom: "16px",
     color: "#1f2f2b"
@@ -227,7 +227,6 @@ cardContent: {
   zIndex: 3,
   color: "#f1f1f1"
 },
-
 
 title: {
   color: "rgb(191, 167, 106)",
