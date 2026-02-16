@@ -1,0 +1,24 @@
+/* ================= TEMA CLARO (PADRÃO) ================= */
+:root {
+  --bg-page: #f0f0f0;
+  --bg-card: #ffffff;
+  --text-primary: #1f2f2b;
+  --text-secondary: #444;
+  --border-color: #e0e0e0;
+  --accent: #bfa76a;
+}
+
+/* ================= TEMA ESCURO ================= */
+[data-theme="dark"] {
+  --bg-page: #121212;
+  --bg-card: #1f2f2b;
+  --text-primary: #eaeaea;
+  --text-secondary: #cfcfcf;
+  --border-color: #2e3e3a;
+  --accent: #bfa76a;
+}
+
+/* TRANSIÇÃO GLOBAL */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
