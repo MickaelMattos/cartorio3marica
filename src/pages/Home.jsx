@@ -13,7 +13,7 @@ export default function Home() {
       {/* APRESENTAÇÃO */}
     <section style={{ ...styles.section, textAlign: "center" }}>
   <h1 style={styles.mainTitle}>
-    Cartório do 3º Distrito de Maricá-RJ (Cartório de Inoã)
+    Cartório do 3º Distrito de Maricá-RJ
   </h1>
   <p style={styles.text}>
     O Cartório do 3º Distrito de Maricá-RJ é responsável pela prestação
