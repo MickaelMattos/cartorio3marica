@@ -302,15 +302,15 @@ export default function Testamento() {
       </section>
 
       <div className="whatsapp-contact">
-        <p>Para fazer seu testamento ou esclarecer dúvidas, entre em contato:</p>
+        <p>Para agendar escrituras ou obter mais informações, entre em contato:</p>
         <a
-          href="https://wa.me/5521991633030"
+          href="https://wa.me/5521994135564"
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-button"
         >
           <img src="/src/assets/images/whatsapp.png" alt="WhatsApp" />
-          <span>(21) 99163-3030</span>
+          <span>(21) 99413-5564</span>
         </a>
       </div>
     </>
