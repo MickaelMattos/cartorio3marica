@@ -263,8 +263,8 @@ export default function Escrituras() {
           Justiça de cada estado, Provimentos do Conselho Nacional de Justiça.
         </p>
       </section>
-
-      <div className="whatsapp-contact">
+	  
+	  <div className="whatsapp-contact">
         <p>Para agendar escrituras ou obter mais informações, entre em contato:</p>
         <a
           href="https://wa.me/5521994135564"
