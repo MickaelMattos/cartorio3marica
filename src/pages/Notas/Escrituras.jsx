@@ -272,7 +272,7 @@ export default function Escrituras() {
           rel="noopener noreferrer"
           className="whatsapp-button"
         >
-          <img src="/src/assets/images/whatsapp.png" alt="WhatsApp" />
+          <img src="../src/assets/images/whatsapp.png" alt="WhatsApp" />
           <span>(21) 99413-5564</span>
         </a>
       </div>
