@@ -1,253 +1,190 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Obito() {
   return (
-    <div style={styles.page}>
-      <h1 style={styles.title}>Registro de Óbito</h1>
+    <>
+      <section className="content-section">
+        <h2 className="section-title">Gratuidade</h2>
+        <div className="success-box">
+          <p>
+            <strong>Importante:</strong> O registro de óbito, bem como a primeira certidão, 
+            são <strong>GRATUITOS</strong>, conforme a legislação vigente (Lei nº 9.534/1997).
+          </p>
+        </div>
+      </section>
 
-      <AnimatedSection title="Gratuidade">
+      <section className="content-section">
+        <h2 className="section-title">Prazo para Registro</h2>
         <p>
-          O registro de óbito, bem como a primeira certidão, são
-          <strong> GRATUITOS</strong>, conforme a legislação vigente.
+          O óbito deve ser registrado no prazo de <strong>até 24 horas</strong> após 
+          o falecimento, no Cartório de Registro Civil:
         </p>
-      </AnimatedSection>
-
-      <AnimatedSection title="Documentação Obrigatória">
-        <p>
-          O registro de óbito somente pode ser realizado mediante a apresentação
-          da <strong>Declaração de Óbito</strong>, fornecida por hospital ou por
-          médico habilitado, nos casos de óbito ocorrido em domicílio.
-        </p>
-
-        <p>
-          A Declaração de Óbito deve ser preenchida pelo médico que atestou a
-          morte. Havendo erro no preenchimento de qualquer campo, a correção deve
-          ser realizada na lateral da própria declaração, com indicação do item
-          incorreto, inserção da informação correta, assinatura e carimbo do
-          médico responsável.
-        </p>
-      </AnimatedSection>
-
-      <AnimatedSection title="Competência Territorial">
-        <p>
-          A competência para o registro de óbito é da Serventia de Registro Civil:
-        </p>
-
         <ul>
-          <li>Do local do falecimento; ou</li>
-          <li>
-            Do local de residência do falecido, quando o óbito ocorrer em local
-            diverso do domicílio.
-          </li>
+          <li>Do local onde ocorreu o óbito, ou</li>
+          <li>Do local de residência do falecido, ou</li>
+          <li>Do local de sepultamento</li>
         </ul>
 
+        <div className="warning-box">
+          <p>
+            <strong>Atenção:</strong> O sepultamento só pode ser realizado após 
+            a emissão da Certidão de Óbito.
+          </p>
+        </div>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Quem Pode Fazer a Declaração</h2>
+        <p>Estão obrigados a fazer a declaração de óbito, pela ordem:</p>
+        <ol>
+          <li>Chefe de família, a respeito de sua mulher, filhos, hóspedes, agregados e fâmulos</li>
+          <li>A viúva, a respeito de seu marido, e de cada uma das pessoas indicadas no item anterior</li>
+          <li>O filho, a respeito do pai ou da mãe</li>
+          <li>O irmão, a respeito dos irmãos e demais pessoas de casa</li>
+          <li>O parente mais próximo maior e presente</li>
+          <li>O administrador, diretor ou gerente de qualquer estabelecimento público ou particular, 
+              a respeito dos que nele faleceram</li>
+          <li>Na falta de pessoa competente, nos casos anteriores, a que tiver assistido aos últimos 
+              momentos do finado, o médico, o sacerdote ou vizinho que do falecimento tiver notícia</li>
+        </ol>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Documentos Necessários</h2>
+        
+        <h3 className="section-subtitle">Documentação Obrigatória</h3>
+        <ul>
+          <li><strong>Declaração de Óbito (DO)</strong> expedida por médico (original)</li>
+          <li><strong>Documento de identidade do falecido</strong> (RG, CNH ou outro documento oficial com foto)</li>
+          <li><strong>CPF do falecido</strong></li>
+          <li><strong>Certidão de Casamento</strong> (se o falecido era casado) - para fins de averbação</li>
+          <li><strong>Documento de identidade do declarante</strong> (original e cópia)</li>
+        </ul>
+
+        <h3 className="section-subtitle">Documentação Complementar (quando aplicável)</h3>
+        <ul>
+          <li>Certidão de nascimento ou casamento do falecido</li>
+          <li>Comprovante de residência do falecido</li>
+          <li>Declaração de sepultamento ou cremação</li>
+        </ul>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Óbitos Ocorridos em Hospitais ou Estabelecimentos de Saúde</h2>
         <p>
-          Esta regra foi alterada pela Lei nº 13.484/2017, ampliando a
-          possibilidade de escolha do local do registro.
+          Quando o óbito ocorre em hospital, clínica ou outro estabelecimento de saúde, 
+          o próprio estabelecimento fornece a Declaração de Óbito (DO) preenchida por médico.
         </p>
-      </AnimatedSection>
-
-      <AnimatedSection title="Documentação Necessária">
-        <h3 style={styles.subTitle}>Documentos Obrigatórios</h3>
-        <ul>
-          <li>Declaração de Óbito;</li>
-          <li>
-            Documento de identificação do declarante (maior de 18 anos);
-          </li>
-          <li>
-            Pelo menos um documento de identificação do falecido.
-          </li>
-        </ul>
-
-        <h3 style={styles.subTitle}>Documentos Recomendados do Falecido</h3>
         <p>
-          Quanto maior o número de documentos apresentados, maior a precisão das
-          informações constantes do registro:
+          O declarante deve comparecer ao Cartório munido da DO e da documentação pessoal 
+          do falecido e do declarante.
         </p>
+      </section>
 
-        <ul>
-          <li>Certidão de nascimento;</li>
-          <li>
-            Certidão de casamento (necessária para constar o nome do cônjuge);
-          </li>
-          <li>Cédula de identidade (RG);</li>
-          <li>Carteira Nacional de Habilitação (CNH);</li>
-          <li>CPF;</li>
-          <li>Título de eleitor;</li>
-          <li>Cartão de inscrição no INSS.</li>
-        </ul>
-      </AnimatedSection>
+      <section className="content-section">
+        <h2 className="section-title">Óbitos Ocorridos em Residência ou Via Pública</h2>
+        <div className="info-box">
+          <p>
+            Quando o óbito ocorre em residência, via pública ou circunstâncias não hospitalares, 
+            é necessário acionar o Serviço de Verificação de Óbito (SVO) ou, dependendo da 
+            circunstância, a autoridade policial competente, que providenciará a Declaração de Óbito.
+          </p>
+        </div>
+      </section>
 
-      <AnimatedSection title="Declarante do Óbito – Ordem de Preferência Legal">
+      <section className="content-section">
+        <h2 className="section-title">Óbitos por Causa Externa ou Suspeita</h2>
         <p>
-          O artigo 79 da Lei nº 6.015/1973 estabelece a seguinte ordem de
-          preferência para a declaração do óbito:
+          Em casos de morte violenta, suspeita ou por causa externa (acidente, homicídio, suicídio), 
+          o corpo deve ser encaminhado ao Instituto Médico Legal (IML) ou órgão equivalente.
         </p>
-
-        <h3 style={styles.subTitle}>1ª Ordem de Preferência</h3>
-        <ul>
-          <li>
-            Chefe de família, em relação à mulher, filhos, hóspedes, agregados e
-            fâmulos;
-          </li>
-          <li>Viúva, em relação ao marido e demais pessoas da casa.</li>
-        </ul>
-
-        <h3 style={styles.subTitle}>2ª Ordem de Preferência</h3>
-        <ul>
-          <li>Filho, em relação ao pai ou à mãe;</li>
-          <li>
-            Irmão, em relação aos irmãos e demais pessoas da casa;
-          </li>
-          <li>Parente mais próximo, maior de idade e presente.</li>
-        </ul>
-
-        <h3 style={styles.subTitle}>3ª Ordem de Preferência</h3>
-        <ul>
-          <li>
-            Administrador, diretor ou gerente de estabelecimento público ou
-            particular onde ocorreu o falecimento, salvo se presente parente
-            das ordens anteriores.
-          </li>
-        </ul>
-
-        <h3 style={styles.subTitle}>4ª Ordem de Preferência</h3>
-        <ul>
-          <li>Pessoa que assistiu aos últimos momentos do falecido;</li>
-          <li>Médico;</li>
-          <li>Sacerdote;</li>
-          <li>Vizinho que teve notícia do falecimento.</li>
-        </ul>
-
-        <h3 style={styles.subTitle}>5ª Ordem de Preferência</h3>
-        <ul>
-          <li>
-            Autoridade policial, nos casos de pessoas encontradas mortas.
-          </li>
-        </ul>
-      </AnimatedSection>
-
-      <AnimatedSection title="Observações Importantes">
-        <ul>
-          <li>
-            O declarante deve ser maior de 18 anos e portar documento de
-            identificação;
-          </li>
-          <li>
-            Devem ser informados dados como estado civil, nome do cônjuge, se
-            deixou filhos, bens, testamento e se era eleitor;
-          </li>
-          <li>
-            A declaração pode ser feita por preposto, mediante autorização
-            escrita do declarante;
-          </li>
-          <li>É obrigatória a indicação do local de sepultamento;</li>
-          <li>
-            O rol legal é exemplificativo, não impedindo que outras pessoas
-            façam a declaração por interesse público.
-          </li>
-        </ul>
-      </AnimatedSection>
-
-      <AnimatedSection title="Cremação – Requisitos Legais">
         <p>
-          Para a realização da cremação, devem ser atendidos os seguintes
-          requisitos legais:
+          A Declaração de Óbito será emitida após a realização da necropsia e liberação pelo IML.
         </p>
+        
+        <div className="warning-box">
+          <p>
+            <strong>Importante:</strong> Nesses casos, o registro do óbito depende da autorização 
+            judicial ou da polícia técnica.
+          </p>
+        </div>
+      </section>
 
+      <section className="content-section">
+        <h2 className="section-title">Óbito de Natimorto</h2>
+        <p>
+          Quando ocorre óbito fetal (natimorto), o registro será feito no livro de registro de 
+          óbito, não gerando assento de nascimento.
+        </p>
+        <p>
+          Documentos necessários:
+        </p>
         <ul>
-          <li>
-            Manifestação de vontade do falecido, expressa em vida, ou interesse
-            da saúde pública;
-          </li>
-          <li>
-            Atestado de óbito assinado por dois médicos ou por um médico legista;
-          </li>
-          <li>
-            Comprovação de morte não violenta (em caso de morte violenta, é
-            necessária autorização judicial);
-          </li>
-          <li>Prazo mínimo de 24 horas após o falecimento.</li>
+          <li>Declaração de Óbito Fetal emitida por médico</li>
+          <li>Documentos de identificação dos pais</li>
+          <li>Certidão de casamento dos pais (se casados)</li>
         </ul>
+      </section>
 
+      <section className="content-section">
+        <h2 className="section-title">Averbação do Óbito no Registro de Casamento</h2>
         <p>
-          <strong>Manifestação de Vontade:</strong> Embora a lei não exija forma
-          específica, recomenda-se declaração escrita e registrada em cartório.
-          Na ausência, os tribunais têm aceitado declarações de familiares que
-          comprovem a vontade do falecido.
+          Após o registro do óbito, quando o falecido era casado, é importante realizar a 
+          averbação do óbito na certidão de casamento. Isso atualiza o estado civil do 
+          cônjuge sobrevivente para viúvo(a).
         </p>
-      </AnimatedSection>
+        <div className="highlight-box">
+          <p>
+            Essa averbação pode ser solicitada no mesmo ato do registro de óbito ou 
+            posteriormente, mediante apresentação da certidão de óbito.
+          </p>
+        </div>
+      </section>
 
-      <AnimatedSection title="Plantão de Finais de Semana e Feriados">
+      <section className="content-section">
+        <h2 className="section-title">Emissão de Certidão de Óbito</h2>
         <p>
-          O Registro Civil funciona em regime de plantão aos sábados, domingos e
-          feriados, no horário de <strong>09h às 12h</strong>, exclusivamente
-          para a lavratura de registros de óbito.
+          Após o registro, a primeira via da certidão é gratuita e será entregue ao declarante.
         </p>
-      </AnimatedSection>
-    </div>
+        <p>
+          Vias adicionais ou certidões de segunda via são sujeitas ao pagamento de emolumentos 
+          conforme tabela vigente, salvo nos casos de gratuidade legal.
+        </p>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Retificação ou Correção de Óbito</h2>
+        <p>
+          Erros ou omissões no registro de óbito podem ser corrigidos mediante:
+        </p>
+        <ul>
+          <li>Averbação administrativa (erros materiais evidentes)</li>
+          <li>Procedimento judicial (alterações substanciais)</li>
+        </ul>
+        <p>
+          Para esclarecimentos sobre retificações, consulte o cartório responsável pelo registro.
+        </p>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Base Legal</h2>
+        <p>
+          Lei nº 6.015/1973 (Lei de Registros Públicos), Lei nº 9.534/1997 (Gratuidade de 
+          Registros Civis), Código Civil Brasileiro, Provimentos do Conselho Nacional de 
+          Justiça e Código de Normas da Corregedoria Geral da Justiça.
+        </p>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Informações Importantes</h2>
+        <div className="info-box">
+          <p>
+            Para situações específicas ou casos excepcionais, recomenda-se o comparecimento 
+            pessoal ao cartório para orientação individualizada. Nossa equipe está à 
+            disposição para esclarecer dúvidas e auxiliar no processo.
+          </p>
+        </div>
+      </section>
+    </>
   );
 }
-
-/* ======================= */
-/* COMPONENTE ANIMADO */
-/* ======================= */
-
-function AnimatedSection({ title, children }) {
-  const [hover, setHover] = useState(false);
-
-  return (
-    <section
-      style={{
-        ...styles.section,
-        transform: hover ? "scale(1.02)" : "scale(1)"
-      }}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      <h2 style={styles.sectionTitle}>{title}</h2>
-      {children}
-    </section>
-  );
-}
-
-/* ======================= */
-/* ESTILOS */
-/* ======================= */
-
-const styles = {
-  page: {
-    maxWidth: 1000,
-    margin: "0 auto",
-    padding: "40px 20px",
-    color: "#eaeaea"
-  },
-
-  title: {
-    color: "rgb(191,167,106)",
-    marginBottom: 40,
-    textAlign: "center",
-    fontSize: 32
-  },
-
-  section: {
-    background: "#1f2f2b",
-    padding: 30,
-    borderRadius: 14,
-    marginBottom: 30,
-    transition: "transform 0.25s ease"
-  },
-
-  sectionTitle: {
-    color: "rgb(191,167,106)",
-    marginBottom: 15,
-    fontSize: 22
-  },
-
-  subTitle: {
-    color: "#d6c28b",
-    marginTop: 20,
-    marginBottom: 10,
-    fontSize: 18
-  }
-};

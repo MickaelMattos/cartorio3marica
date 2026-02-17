@@ -1,246 +1,247 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Inventario() {
   return (
-        <div style={styles.page}>
-      <h1 style={styles.title}>Inventário</h1>
-
-      {/* INTRODUÇÃO */}
-      <AnimatedSection title="">
+    <>
+      <section className="content-section">
+        <h2 className="section-title">O que é Inventário Extrajudicial</h2>
         <p>
-          O inventário é o procedimento destinado à apuração dos bens, direitos
-          e dívidas deixados por pessoa falecida, com posterior partilha entre
-          os herdeiros. Desde a Lei 11.441/07, é possível realizar o inventário
-          em cartório, por escritura pública, de forma mais rápida, simples e
-          segura, quando preenchidos os requisitos legais.
+          O inventário extrajudicial é o procedimento realizado <strong>diretamente 
+          em cartório</strong>, sem necessidade de processo judicial, para formalizar 
+          a partilha de bens deixados por pessoa falecida.
         </p>
-      </AnimatedSection>
-
-      {/* REQUISITOS */}
-      <AnimatedSection title="Requisitos para Inventário em Cartório">
-        <ul>
-          <li>Todos os herdeiros devem ser maiores e capazes;</li>
-          <li>Deve haver consenso quanto à partilha dos bens;</li>
-          <li>É obrigatória a presença de advogado;</li>
-          <li>
-            Havendo testamento, é necessária autorização judicial,
-            salvo nos casos de testamento revogado, caduco ou declarado inválido.
-          </li>
-        </ul>
-      </AnimatedSection>
-
-      {/* DOCUMENTOS DO FALECIDO */}
-      <AnimatedSection title="Documentos do Falecido">
-        <ul>
-          <li>RG e CPF;</li>
-          <li>Certidão de óbito;</li>
-          <li>
-            Certidão de casamento atualizada (até 6 meses) ou certidão de
-            nascimento, se solteiro;
-          </li>
-          <li>Escritura de pacto antenupcial e respectivo registro (se houver);</li>
-          <li>Certidão negativa de testamento (CENSEC);</li>
-          <li>Certidões dos distribuidores competentes;</li>
-          <li>Certidão conjunta de débitos federais;</li>
-          <li>Cópia da última declaração de Imposto de Renda.</li>
-        </ul>
-      </AnimatedSection>
-
-      {/* DOCUMENTOS DOS HERDEIROS */}
-      <AnimatedSection title="Documentos dos Herdeiros e Advogado">
-        <ul>
-          <li>RG e CPF;</li>
-          <li>
-            Certidão de nascimento (solteiros) ou certidão de casamento
-            atualizada até 90 dias;
-          </li>
-          <li>Qualificação completa das partes;</li>
-          <li>Carteira da OAB e qualificação do advogado.</li>
-        </ul>
-      </AnimatedSection>
-
-      {/* BENS */}
-      <AnimatedSection title="Documentos dos Bens">
-        <ul>
-          <li>
-            <strong>Imóveis Urbanos:</strong> Certidão de ônus atualizada (30 dias),
-            IPTU do ano vigente e do óbito, certidão municipal negativa e
-            declaração de quitação condominial.
-          </li>
-          <li>
-            <strong>Imóveis Rurais:</strong> Certidão de ônus, CCIR, ITR,
-            Certidão Negativa de Débitos de Imóvel Rural e CAR.
-          </li>
-          <li>
-            <strong>Veículos:</strong> CRLV do exercício.
-          </li>
-          <li>
-            <strong>Contas bancárias e investimentos:</strong> Extratos na data do óbito.
-          </li>
-          <li>
-            <strong>Empresas:</strong> CNPJ, contrato social atualizado,
-            certidão da Junta Comercial e balanço patrimonial.
-          </li>
-        </ul>
-      </AnimatedSection>
-
-      {/* DÍVIDAS E INVENTARIANTE */}
-      <AnimatedSection title="Dívidas, Direitos e Inventariante">
-        <ul>
-          <li>
-            Devem ser informadas eventuais dívidas e respectivos credores;
-          </li>
-          <li>
-            A herança responde pelas dívidas até o limite do patrimônio deixado;
-          </li>
-          <li>
-            Deve ser nomeado inventariante para representar o espólio;
-          </li>
-          <li>
-            A partilha deve indicar o valor atribuído a cada bem.
-          </li>
-        </ul>
-      </AnimatedSection>
-
-      {/* IMPOSTO */}
-      <AnimatedSection title="Imposto (ITCMD)">
         <p>
-          O ITCMD (Imposto sobre Transmissão Causa Mortis) deve ser recolhido
-          antes da lavratura da escritura. Pode ser pago sem multa até 60 dias
-          da data do óbito. Após esse prazo, incidem encargos legais.
+          Introduzido pela Lei nº 11.441/2007, este procedimento torna a sucessão 
+          mais ágil, econômica e menos burocrática, desde que preenchidos os requisitos legais.
         </p>
-      </AnimatedSection>
+      </section>
 
-      {/* SITUAÇÕES ESPECIAIS */}
-      <AnimatedSection title="Situações Especiais">
+      <section className="content-section">
+        <h2 className="section-title">Requisitos para Inventário em Cartório</h2>
+        <div className="highlight-box">
+          <p><strong>Condições obrigatórias:</strong></p>
+          <ul>
+            <li>Todos os herdeiros devem ser <strong>maiores e capazes</strong></li>
+            <li>Deve haver <strong>consenso</strong> entre todos os herdeiros quanto à partilha</li>
+            <li>Não pode existir <strong>testamento</strong></li>
+            <li>Obrigatória a <strong>assistência de advogado</strong> ou defensor público</li>
+          </ul>
+        </div>
+        <div className="warning-box">
+          <p>
+            <strong>Atenção:</strong> Se houver testamento, herdeiros menores ou incapazes, 
+            ou discordância entre herdeiros, o inventário deve ser <strong>judicial</strong>.
+          </p>
+        </div>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Vantagens do Inventário Extrajudicial</h2>
         <ul>
-          <li>Inventário com testamento (mediante autorização judicial);</li>
-          <li>Reconhecimento de união estável por consenso;</li>
-          <li>Renúncia de herança;</li>
-          <li>Sobrepartilha de bens descobertos posteriormente;</li>
-          <li>Inventário negativo;</li>
-          <li>Procuração pública com poderes específicos.</li>
+          <li><strong>Rapidez:</strong> Conclusão em semanas, ao invés de meses ou anos</li>
+          <li><strong>Menor custo:</strong> Dispensam-se custas judiciais</li>
+          <li><strong>Menos burocracia:</strong> Procedimento simplificado</li>
+          <li><strong>Flexibilidade:</strong> Horários mais amplos para atendimento</li>
+          <li><strong>Privacidade:</strong> Ato realizado em cartório, sem publicidade judicial</li>
         </ul>
-      </AnimatedSection>
+      </section>
 
-      {/* COMPETÊNCIA */}
-      <AnimatedSection title="Competência">
+      <section className="content-section">
+        <h2 className="section-title">Documentação Necessária</h2>
+        
+        <h3 className="section-subtitle">Do Falecido</h3>
+        <ul>
+          <li>Certidão de óbito (atualizada)</li>
+          <li>Certidão de casamento com averbação do óbito (se casado)</li>
+          <li>Certidão de nascimento (se solteiro)</li>
+          <li>RG e CPF</li>
+        </ul>
+
+        <h3 className="section-subtitle">Dos Herdeiros</h3>
+        <ul>
+          <li>RG e CPF (original e cópia)</li>
+          <li>Comprovante de residência</li>
+          <li>Certidão de casamento ou nascimento</li>
+          <li>Certidão de nascimento dos filhos</li>
+        </ul>
+
+        <h3 className="section-subtitle">Dos Bens</h3>
+        <ul>
+          <li><strong>Imóveis:</strong> Matrícula atualizada, IPTU, certidões negativas</li>
+          <li><strong>Veículos:</strong> Documento do veículo (CRLV)</li>
+          <li><strong>Valores:</strong> Extratos bancários, comprovantes de investimentos</li>
+          <li><strong>Outros bens:</strong> Documentos comprobatórios</li>
+        </ul>
+
+        <h3 className="section-subtitle">Certidões Negativas</h3>
+        <ul>
+          <li>Certidão negativa de tributos federais</li>
+          <li>Certidão negativa de tributos estaduais</li>
+          <li>Certidão negativa de tributos municipais</li>
+          <li>Certidão de inexistência de testamento (Colégio Notarial do Brasil)</li>
+        </ul>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Procedimento do Inventário Extrajudicial</h2>
+        <ol>
+          <li><strong>Consulta prévia:</strong> Verificação de requisitos e documentação</li>
+          <li><strong>Elaboração da escritura:</strong> Advogado e tabelião elaboram minuta</li>
+          <li><strong>Cálculo de tributos:</strong> Apuração de ITCMD (Imposto de Transmissão)</li>
+          <li><strong>Pagamento do ITCMD:</strong> Recolhimento do imposto estadual</li>
+          <li><strong>Lavratura da escritura:</strong> Comparecimento de todos os herdeiros ao cartório</li>
+          <li><strong>Assinaturas:</strong> Herdeiros, cônjuge sobrevivente, advogado e tabelião</li>
+          <li><strong>Registro:</strong> Averbação no Registro de Imóveis (quando há imóveis)</li>
+        </ol>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Partilha dos Bens</h2>
         <p>
-          É livre a escolha do tabelião de notas, independentemente do domicílio
-          das partes, local dos bens ou do óbito. Não se aplicam as regras de
-          competência do processo judicial ao inventário extrajudicial.
+          A partilha pode ser feita de diversas formas, conforme acordo entre os herdeiros:
         </p>
-      </AnimatedSection>
+        <ul>
+          <li><strong>Adjudicação:</strong> Um herdeiro fica com determinado bem</li>
+          <li><strong>Partilha em condomínio:</strong> Bens ficam em propriedade comum</li>
+          <li><strong>Venda e divisão do valor:</strong> Bens são vendidos e valor dividido</li>
+          <li><strong>Mista:</strong> Combinação das formas anteriores</li>
+        </ul>
 
-      {/* EFEITOS */}
-      <AnimatedSection title="Efeitos da Escritura">
+        <div className="info-box">
+          <p>
+            É importante que a partilha respeite os direitos sucessórios de cada herdeiro 
+            conforme a lei (meação, legítima, etc.).
+          </p>
+        </div>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">ITCMD - Imposto de Transmissão</h2>
         <p>
-          A escritura pública de inventário produz efeitos imediatos e não
-          depende de homologação judicial. Para transferência dos bens,
-          deverá ser apresentada aos órgãos competentes, como Registro de
-          Imóveis, DETRAN, Junta Comercial e instituições financeiras.
+          O <strong>ITCMD</strong> (Imposto sobre Transmissão Causa Mortis e Doação) é 
+          tributo estadual devido na transmissão de bens por herança.
         </p>
-      </AnimatedSection>
-	  
-	  {/* CONTATO WHATSAPP */}
-<AnimatedSection title="">
-  <div style={{ textAlign: "center" }}>
-    <p style={{ marginBottom: 20, fontWeight: "bold", fontSize: 18 }}>
-      Para maiores informações, entre em contato:
-    </p>
+        <p><strong>Características:</strong></p>
+        <ul>
+          <li>Alíquota varia conforme o estado (geralmente entre 4% e 8%)</li>
+          <li>Calculado sobre o valor venal dos bens</li>
+          <li>Deve ser pago antes da lavratura da escritura</li>
+          <li>Isenções em alguns estados para valores pequenos</li>
+        </ul>
+      </section>
 
-    <a
-      href="https://wa.me/5521994135564"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        gap: "12px",
-        padding: "14px 26px",
-        borderRadius: "30px",
-        backgroundColor: "rgb(31, 47, 43)",
-        color: "rgb(255, 255, 255)",
-        fontWeight: 500,
-        textDecoration: "none",
-        fontSize: 16,
-        transition: "transform 0.2s ease"
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-      onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-    >
-      <img
-        src="/src/assets/images/whatsapp.png"
-        alt="WhatsApp"
-        style={{ width: 28, height: 28 }}
-      />
-      <span>(21) 99413-5564</span>
-    </a>
-  </div>
-</AnimatedSection>
-    </div>
+      <section className="content-section">
+        <h2 className="section-title">Papel do Advogado</h2>
+        <p>
+          A presença de advogado é <strong>obrigatória</strong> no inventário extrajudicial.
+        </p>
+        <p><strong>Funções:</strong></p>
+        <ul>
+          <li>Orientar os herdeiros sobre direitos e deveres</li>
+          <li>Elaborar minuta da escritura</li>
+          <li>Acompanhar o procedimento no cartório</li>
+          <li>Auxiliar na regularização documental</li>
+        </ul>
+
+        <div className="success-box">
+          <p>
+            <strong>Gratuidade:</strong> Herdeiros que não possam arcar com custos de 
+            advogado podem solicitar assistência da Defensoria Pública.
+          </p>
+        </div>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Prazo e Custos</h2>
+        
+        <h3 className="section-subtitle">Prazo</h3>
+        <p>
+          O inventário extrajudicial costuma ser concluído em <strong>30 a 90 dias</strong>, 
+          dependendo da complexidade e da rapidez na obtenção de documentos.
+        </p>
+
+        <h3 className="section-subtitle">Custos</h3>
+        <ul>
+          <li>Emolumentos cartorários (conforme tabela estadual)</li>
+          <li>ITCMD (imposto estadual)</li>
+          <li>Honorários advocatícios</li>
+          <li>Certidões e documentos</li>
+          <li>Registro de imóveis (quando aplicável)</li>
+        </ul>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Inventário Negativo (Sem Bens)</h2>
+        <p>
+          Quando o falecido não deixou bens, mas é necessário formalizar essa situação 
+          (para fins previdenciários, por exemplo), lavra-se <strong>escritura declaratória 
+          de ausência de bens</strong>.
+        </p>
+        <p><strong>Finalidade:</strong></p>
+        <ul>
+          <li>Comprovar que não há bens a inventariar</li>
+          <li>Habilitar dependentes em pensão por morte</li>
+          <li>Regularizar situação cadastral</li>
+        </ul>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Casos Especiais</h2>
+
+        <h3 className="section-subtitle">Cônjuge Sobrevivente</h3>
+        <p>
+          O cônjuge sobrevivente tem direito à meação (metade dos bens do casal, conforme 
+          regime de bens) e pode ser herdeiro, conforme o caso.
+        </p>
+
+        <h3 className="section-subtitle">Companheiro(a) em União Estável</h3>
+        <p>
+          O companheiro tem direitos sucessórios equiparados aos do cônjuge, devendo 
+          ser incluído na partilha.
+        </p>
+
+        <h3 className="section-subtitle">Herdeiros no Exterior</h3>
+        <p>
+          Herdeiros residentes no exterior podem outorgar procuração com poderes específicos 
+          para o inventário, com reconhecimento consular ou apostilamento.
+        </p>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Quando NÃO é Possível Fazer em Cartório</h2>
+        <div className="warning-box">
+          <p><strong>O inventário deve ser judicial quando:</strong></p>
+          <ul>
+            <li>Houver herdeiros menores de idade ou incapazes</li>
+            <li>Existir testamento (mesmo que não haja conflito)</li>
+            <li>Houver discordância entre os herdeiros quanto à partilha</li>
+            <li>Algum herdeiro não puder ou não quiser comparecer pessoalmente 
+                (sem procuração adequada)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Base Legal</h2>
+        <p>
+          Lei nº 11.441/2007, Código Civil Brasileiro (arts. 1.784 a 2.027), Código de 
+          Processo Civil, Resolução CNJ nº 35/2007, Lei nº 8.935/1994, Código de Normas 
+          da Corregedoria Geral da Justiça.
+        </p>
+      </section>
+
+      <div className="whatsapp-contact">
+        <p>Para iniciar inventário ou esclarecer dúvidas, entre em contato:</p>
+        <a
+          href="https://wa.me/5521991633030"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-button"
+        >
+          <img src="/src/assets/images/whatsapp.png" alt="WhatsApp" />
+          <span>(21) 99163-3030</span>
+        </a>
+      </div>
+    </>
   );
 }
-
-/* ======================= */
-/* COMPONENTE ANIMADO */
-/* ======================= */
-
-function AnimatedSection({ title, children }) {
-  const [hover, setHover] = useState(false);
-
-  return (
-    <section
-      style={{
-        ...styles.section,
-        transform: hover ? "scale(1.02)" : "scale(1)"
-      }}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      <h2 style={styles.sectionTitle}>{title}</h2>
-      {children}
-    </section>
-  );
-}
-
-/* ======================= */
-/* ESTILOS */
-/* ======================= */
-
-const styles = {
-  page: {
-    maxWidth: 1000,
-    margin: "0 auto",
-    padding: "40px 20px",
-    color: "#eaeaea"
-  },
-
-  title: {
-    color: "rgb(191,167,106)",
-    marginBottom: 40,
-    textAlign: "center",
-    fontSize: 32
-  },
-
-  section: {
-    background: "#1f2f2b",
-    padding: 30,
-    borderRadius: 14,
-    marginBottom: 30,
-    transition: "transform 0.25s ease"
-  },
-
-  sectionTitle: {
-    color: "rgb(191,167,106)",
-    marginBottom: 15,
-    fontSize: 22
-  },
-
-  subTitle: {
-    color: "#d6c28b",
-    marginTop: 10,
-    marginBottom: 10,
-    fontSize: 18
-  }
-};

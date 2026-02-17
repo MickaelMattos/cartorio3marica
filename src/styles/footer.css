@@ -18,11 +18,13 @@
 .footer-column h4 {
   color: #bfa76a;
   margin-bottom: 14px;
+  font-size: 18px;
 }
 
 .footer-column p {
   line-height: 1.6;
   color: #dcdcdc;
+  margin-bottom: 10px;
 }
 
 .footer-column ul {
@@ -66,6 +68,11 @@
 .security-icons img {
   width: 28px;
   height: 28px;
+  flex-shrink: 0;
+}
+
+.security-icons span {
+  font-size: 13px;
 }
 
 .footer-bottom {
@@ -76,19 +83,119 @@
   color: #cfcfcf;
 }
 
-@media (max-width: 600px) {
+/* ========================================
+   TABLET (< 968px)
+   ======================================== */
+
+@media (max-width: 968px) {
+  .footer-container {
+    padding: 40px 20px;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-column h3,
+  .footer-column h4 {
+    font-size: 17px;
+  }
+
+  .security-icons {
+    gap: 10px;
+  }
+}
+
+/* ========================================
+   MOBILE (< 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
   .footer {
+    margin-top: 60px;
+    font-size: 13px;
+  }
+
+  .footer-container {
+    padding: 30px 16px;
+    gap: 24px;
+    grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .footer-column h3,
+  .footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .footer-column p {
+    font-size: 13px;
+  }
+
+  .footer-column ul {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .security-icons {
+    align-items: center;
+    gap: 12px;
   }
 
   .security-icons div {
     justify-content: center;
   }
+
+  .security-icons div:hover {
+    transform: translateX(0);
+  }
+
+  .footer-bottom {
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
 }
+
+/* ========================================
+   MOBILE PEQUENO (< 480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+  .footer {
+    margin-top: 40px;
+  }
+
+  .footer-container {
+    padding: 24px 12px;
+    gap: 20px;
+  }
+
+  .footer-column h3,
+  .footer-column h4 {
+    font-size: 15px;
+  }
+
+  .footer-column p {
+    font-size: 12px;
+  }
+
+  .security-icons span {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+    padding: 10px 12px;
+  }
+}
+
+/* Theme switch (se existir) */
 .theme-switch {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .switch {
@@ -109,6 +216,7 @@
   background-color: #ccc;
   border-radius: 24px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .slider::before {
@@ -124,7 +232,7 @@
 }
 
 .switch input:checked + .slider {
-  background-color: var(--accent);
+  background-color: var(--accent, #bfa76a);
 }
 
 .switch input:checked + .slider::before {

@@ -9,19 +9,21 @@ export default function App() {
     <>
       <Header />
       <main style={styles.main}>
-  <div style={styles.container}>
-    <Outlet />
-  </div>
-</main>
+        <div style={styles.container}>
+          <Outlet />
+        </div>
+      </main>
       <Footer />
-	  <CookieBanner />
+      <CookieBanner />
     </>
   );
 }
+
 const styles = {
   main: {
     backgroundColor: "#f0f0f0",
-    padding: "40px 20px"
+    padding: "40px 20px",
+    minHeight: "calc(100vh - 200px)"
   },
   container: {
     maxWidth: "1600px",
@@ -32,3 +34,6 @@ const styles = {
     boxShadow: "0 2px 8px rgba(0,0,0,0.05)"
   }
 };
+
+// Media queries via JS inline não funcionam bem, então criaremos um CSS separado
+// Veja app-responsive.css

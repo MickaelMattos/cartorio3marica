@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
 import logo from "../assets/images/logo.png";
+import "../styles/header.css";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);

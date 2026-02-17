@@ -1,252 +1,219 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import rcpnImg from "../assets/images/RCPN.png";
-import notasImg from "../assets/images/NOTAS.png";
-import identidadeImg from "../assets/images/identidade.png";
-
-
-
+import "../styles/pages-clean.css";
 
 export default function Home() {
   return (
-    <div>
+    <div className="rcpn-page">
       {/* APRESENTAÇÃO */}
-    <section style={{ ...styles.section, textAlign: "center" }}>
-  <h1 style={styles.mainTitle}>
-    Cartório do 3º Distrito de Maricá-RJ
-  </h1>
-  <p style={styles.text}>
-    O Cartório do 3º Distrito de Maricá-RJ é responsável pela prestação
-    dos serviços de Registro Civil das Pessoas Naturais (RCPN) e
-    Tabelionato de Notas, atuando com segurança jurídica, transparência
-    e atendimento à população.
-  </p>
-</section>
+      <section className="content-section text-center">
+        <h1 className="page-main-title">Cartório do 3º Distrito de Maricá-RJ</h1>
+        <p style={{ fontSize: "18px", marginBottom: "30px", color: "#555" }}>
+          Bem-vindo ao site oficial do Cartório do 3º Distrito de Maricá. 
+          Oferecemos serviços de Registro Civil das Pessoas Naturais e Tabelionato 
+          de Notas com excelência, segurança jurídica e atendimento humanizado.
+        </p>
+      </section>
 
+      {/* CARDS DE SERVIÇOS PRINCIPAIS */}
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+        gap: "24px",
+        marginBottom: "40px"
+      }}>
+        
+        {/* RCPN */}
+        <Link to="/rcpn" style={{ textDecoration: "none" }}>
+          <div className="content-section" style={{ 
+            height: "100%", 
+            cursor: "pointer",
+            transition: "all 0.3s ease"
+          }}>
+            <h2 className="section-title" style={{ marginBottom: "16px" }}>
+              📋 Registro Civil
+            </h2>
+            <p style={{ marginBottom: "12px", lineHeight: "1.6" }}>
+              Nascimento, casamento, óbito, averbações e certidões.
+            </p>
+            <p style={{ 
+              color: "rgb(191, 167, 106)", 
+              fontWeight: "600",
+              marginTop: "20px"
+            }}>
+              Saiba mais →
+            </p>
+          </div>
+        </Link>
 
-      {/* BLOCO RCPN */}
-<section
-  className="horizontal-card"
-  style={styles.horizontalCard}
->
- <div style={styles.cardContent}>
-  <h2 style={styles.title}>
-    Registro Civil das Pessoas Naturais (RCPN)
-  </h2>
+        {/* NOTAS */}
+        <Link to="/notas" style={{ textDecoration: "none" }}>
+          <div className="content-section" style={{ 
+            height: "100%", 
+            cursor: "pointer",
+            transition: "all 0.3s ease"
+          }}>
+            <h2 className="section-title" style={{ marginBottom: "16px" }}>
+              ✍️ Tabelionato de Notas
+            </h2>
+            <p style={{ marginBottom: "12px", lineHeight: "1.6" }}>
+              Escrituras, procurações, autenticações, reconhecimento de firma e apostila.
+            </p>
+            <p style={{ 
+              color: "rgb(191, 167, 106)", 
+              fontWeight: "600",
+              marginTop: "20px"
+            }}>
+              Saiba mais →
+            </p>
+          </div>
+        </Link>
 
-  <ul style={styles.list}>
-    <li style={styles.listItem}>Nascimento</li>
-    <li style={styles.listItem}>Casamento</li>
-    <li style={styles.listItem}>Óbito</li>
-    <li style={styles.listItem}>Averbações e Anotações</li>
-  </ul>
+        {/* IDENTIDADE CIVIL */}
+        <Link to="/identidade" style={{ textDecoration: "none" }}>
+          <div className="content-section" style={{ 
+            height: "100%", 
+            cursor: "pointer",
+            transition: "all 0.3s ease"
+          }}>
+            <h2 className="section-title" style={{ marginBottom: "16px" }}>
+              🪪 Identidade Civil
+            </h2>
+            <p style={{ marginBottom: "12px", lineHeight: "1.6" }}>
+              Novo documento nacional de identificação unificado.
+            </p>
+            <p style={{ 
+              color: "rgb(191, 167, 106)", 
+              fontWeight: "600",
+              marginTop: "20px"
+            }}>
+              Saiba mais →
+            </p>
+          </div>
+        </Link>
+      </div>
 
-  <Link to="/rcpn" style={styles.button}>
-    Acessar serviços de RCPN
-  </Link>
-</div>
-  
-  <div
-  className="image-side"
-  style={{ "--bg-image": `url(${rcpnImg})` }}
->
-  <div style={styles.overlay}></div>
-</div>
+      {/* DESTAQUES */}
+      <section className="content-section">
+        <h2 className="section-title">🌟 Serviços em Destaque</h2>
+        
+        <div style={{ display: "grid", gap: "16px" }}>
+          <div className="highlight-box">
+            <p style={{ marginBottom: "8px" }}>
+              <strong>Certidões Digitais Online</strong>
+            </p>
+            <p>
+              Solicite certidões de nascimento, casamento e óbito pela internet 
+              através do site Registro Civil.
+            </p>
+          </div>
 
+          <div className="highlight-box">
+            <p style={{ marginBottom: "8px" }}>
+              <strong>Apostila de Haia</strong>
+            </p>
+            <p>
+              Valide seus documentos para uso em mais de 120 países com a 
+              Apostila de Haia.
+            </p>
+          </div>
 
-</section>
+          <div className="highlight-box">
+            <p style={{ marginBottom: "8px" }}>
+              <strong>Inventário e Divórcio Extrajudicial</strong>
+            </p>
+            <p>
+              Realize inventário e divórcio consensual direto em cartório, 
+              com rapidez e economia.
+            </p>
+          </div>
+        </div>
+      </section>
 
-{/* BLOCO NOTAS */}
-<section style={styles.horizontalCard} className="horizontal-card">
-  <div style={styles.cardContent}>
-  <h2 style={styles.title}>
-	Tabelionato de Notas
-  </h2>
+      {/* GRATUIDADES */}
+      <section className="content-section">
+        <h2 className="section-title">💚 Gratuidades Legais</h2>
+        <div className="success-box">
+          <p><strong>São gratuitos os seguintes serviços:</strong></p>
+          <ul style={{ marginTop: "12px", paddingLeft: "20px" }}>
+            <li>Registro de nascimento e primeira certidão</li>
+            <li>Registro de óbito e primeira certidão</li>
+            <li>Registro de natimorto</li>
+            <li>Anotação de óbito no casamento</li>
+            <li>Reconhecimento voluntário de paternidade/maternidade</li>
+          </ul>
+        </div>
+      </section>
 
-    <ul style={styles.list}>
-      <li style={styles.listItem}>Escrituras</li>
-      <li style={styles.listItem}>Testamentos</li>
-      <li style={styles.listItem}>União Estável</li>
-      <li style={styles.listItem}>Procurações</li>
-      <li style={styles.listItem}>Usucapião</li>
-    </ul>
+      {/* HORÁRIO E LOCALIZAÇÃO */}
+      <section className="content-section">
+        <h2 className="section-title">📍 Localização e Horário</h2>
+        
+        <div style={{ marginBottom: "20px" }}>
+          <p style={{ marginBottom: "8px" }}>
+            <strong>Endereço:</strong><br />
+            Av Gilberto Carvalho, nº C-25, Inoã<br />
+            Maricá - RJ, CEP: 24944-000
+          </p>
+        </div>
 
-    <Link to="/notas" style={styles.button}>
-      Acessar serviços de Notas
-    </Link>
-  </div>
+        <div style={{ marginBottom: "20px" }}>
+          <p style={{ marginBottom: "8px" }}>
+            <strong>Horário de Atendimento:</strong><br />
+            Segunda a sexta: 9:30h às 17:00h<br />
+            Sábados, domingos e feriados: 9:00h às 12:00h
+          </p>
+        </div>
 
-   <div
-  className="image-side"
-  style={{ "--bg-image": `url(${notasImg})` }}
->
-  <div style={styles.overlay}></div>
-</div>
+        <div style={{ marginBottom: "20px" }}>
+          <p style={{ marginBottom: "8px" }}>
+            <strong>Telefones:</strong><br />
+            (21) 2636-3910 / (21) 2636-4287<br />
+          </p>
+        </div>
+      </section>
 
-</section>
+      {/* LINKS RÁPIDOS */}
+      <section className="content-section">
+        <h2 className="section-title">🔗 Links Úteis</h2>
+        <div style={{ display: "grid", gap: "12px" }}>
+          <Link to="/links-uteis" className="nav-item" style={{ 
+            display: "block",
+            textAlign: "center",
+            textDecoration: "none"
+          }}>
+            📚 Modelos e Formulários
+          </Link>
+          <Link to="/contato" className="nav-item" style={{ 
+            display: "block",
+            textAlign: "center",
+            textDecoration: "none"
+          }}>
+            📞 Fale Conosco
+          </Link>
+          <Link to="/lgpd" className="nav-item" style={{ 
+            display: "block",
+            textAlign: "center",
+            textDecoration: "none"
+          }}>
+            🔒 Privacidade e LGPD
+          </Link>
+        </div>
+      </section>
 
-{/* BLOCO IDENTIDADE */}
-<section style={styles.horizontalCard} className="horizontal-card">
-  <div style={styles.cardContent}>
-  <h2 style={styles.title}>
-	Carteira de Identidade
-  </h2>
-
-    <ul style={styles.list}>
-      <li style={styles.listItem}>Solicitação de 2ª Via</li>
-      <li style={styles.listItem}>Consulta de Andamento</li>
-    </ul>
-
-    <Link to="/identidade" style={styles.button}>
-      Informações sobre Identidade
-    </Link>
-  </div>
-
-   <div
-  className="image-side"
-  style={{ "--bg-image": `url(${identidadeImg})` }}
->
-  <div style={styles.overlay}></div>
-</div>
-
-</section>
-
-      {/* SERVIÇOS RÁPIDOS */} 
-	   <section className="home-cards">
-
-  <div className="home-card">
-    <h2>Serviços e Informações</h2>
-    <ul>
-      <li>
-        <Link to="/lgpd">Lei Geral de Proteção de Dados (LGPD)</Link>
-      </li>
-      <li>
-        <Link to="/links-uteis">Links Úteis</Link>
-      </li>
-    </ul>
-  </div>
-
-  <div className="home-card highlight">
-    <h2>Fale Conosco</h2>
-    <p>
-      Para atendimento, informações e orientações, acesse nossa página de
-      contato.
-    </p>
-    <Link to="/contato" style={styles.button}>
-      Página de Contato
-    </Link>
-  </div>
-
-</section>
-
+      {/* CONTATO WHATSAPP */}
+      <div className="whatsapp-contact">
+        <p>Tem dúvidas? Fale conosco pelo WhatsApp:</p>
+        <a
+          href="https://wa.me/5521991633030"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-button"
+        >
+          <img src="/src/assets/images/whatsapp.png" alt="WhatsApp" />
+          <span>(21) 96954-2636</span>
+        </a>
+      </div>
     </div>
-	
   );
- 
 }
-
-const styles = {
-  section: {
-    marginBottom: "40px"
-  },
-  sectiontitle: {
-    fontSize: "30px",
-    marginBottom: "16px",
-    color: "#1f2f2b"
-  },
-  text: {
-    fontSize: "16px",
-    lineHeight: "1.6"
-  },
-  box: {
-    backgroundColor: "#f9f9f9",
-    padding: "30px",
-    borderRadius: "6px",
-    marginBottom: "30px",
-    borderLeft: "5px solid #bfa76a"
-  },
-  button: {
-  display: "inline-block",
-  padding: "10px 18px",
-  backgroundColor: "#ffffff",
-  color: "#2f2f2f",
-  textDecoration: "none",
-  borderRadius: "4px",
-  fontWeight: "500"
-},
-
-  contact: {
-    marginTop: "50px",
-    padding: "30px",
-    backgroundColor: "#1f2f2b",
-    color: "#ffffff",
-    borderRadius: "6px"
-  },
-  card: {
-  padding: "30px",
-  borderRadius: "6px",
-  marginBottom: "30px",
-  border: "1px solid #e0e0e0",
-  backgroundColor: "#ffffff"
-},
-cardImage: {
-  width: "100%",
-  height: "220px",
-  objectFit: "contain",
-  marginBottom: "20px",
-  backgroundColor: "#f4f4f4",
-  borderRadius: "4px"
-},
-horizontalCard: {
-  display: "flex",
-  alignItems: "stretch",
-  marginBottom: "40px",
-  borderRadius: "8px",
-  overflow: "hidden",
-  backgroundColor: "#2f2f2f",
-  border: "1px solid #1f1f1f",
-  minHeight: "260px"
-},
-
-cardImageSide: {
-  flex: 1,
-  position: "relative"
-},
-
-overlay: {
-  position: "absolute",
-  inset: 0,
-  backgroundColor: "rgba(0, 0, 0, 0.35)",
-  zIndex: 2,
-  pointerEvents: "none"
-},
-
-cardContent: {
-  width: "60%",
-  padding: "30px",
-  zIndex: 3,
-  color: "#f1f1f1"
-},
-
-title: {
-  color: "rgb(191, 167, 106)",
-  fontSize: "24px",
-  letterSpacing: "0.5px"
-},
-
-list: {
-  marginBottom: "20px"
-},
-
-listItem: {
-  marginBottom: "6px",
-  color: "#dcdcdc"
-},
-
-mainTitle: {
-  fontSize: "34px",
-  marginBottom: "20px",
-  color: "rgb(191, 167, 106)",
-  fontWeight: "600"
-},
-};

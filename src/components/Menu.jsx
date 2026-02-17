@@ -1,96 +1,102 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import "../styles/menu.css";
 
 export default function Menu() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [rcpnOpen, setRcpnOpen] = useState(false);
+  const [notasOpen, setNotasOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => {
+    setIsOpen(false);
+    setRcpnOpen(false);
+    setNotasOpen(false);
+  };
+
   return (
-    <nav style={styles.menu}>
-      <NavLink to="/" style={styles.link}>
-        Início
-      </NavLink>
+    <>
+      {/* BOTÃO HAMBURGER */}
+      <button 
+        className={`hamburger ${isOpen ? 'active' : ''}`}
+        onClick={toggleMenu}
+        aria-label="Menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      {/* RCPN COM SUBMENU */}
-      <div className="menu-rcpn" style={{ ...styles.dropdown, position: "relative" }}>
-        <NavLink to="/rcpn" style={styles.link}>
-          RCPN <span style={styles.arrow}>▼</span>
+      {/* OVERLAY */}
+      {isOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
+
+      {/* MENU NAVEGAÇÃO */}
+      <nav className={`main-menu ${isOpen ? 'open' : ''}`}>
+        
+        <NavLink to="/" className="menu-link" onClick={closeMenu}>
+          Início
         </NavLink>
 
-        <div className="submenu-rcpn" style={styles.dropdownMenu}>
-          <NavLink to="/rcpn/nascimento">Nascimento</NavLink>
-          <NavLink to="/rcpn/casamento">Casamento</NavLink>
-          <NavLink to="/rcpn/obito">Óbito</NavLink>
-          <NavLink to="/rcpn/averbacoes">Averbações e Anotações</NavLink>
-          <NavLink to="/rcpn/certidoes">Certidões</NavLink>
+        {/* RCPN COM SUBMENU */}
+        <div className="menu-dropdown">
+          <button 
+            className="menu-link dropdown-toggle"
+            onClick={() => setRcpnOpen(!rcpnOpen)}
+          >
+            RCPN 
+            <span className={`arrow ${rcpnOpen ? 'up' : ''}`}>▼</span>
+          </button>
+
+          <div className={`submenu ${rcpnOpen ? 'open' : ''}`}>
+            <NavLink to="/rcpn" onClick={closeMenu}>Introdução</NavLink>
+            <NavLink to="/rcpn/nascimento" onClick={closeMenu}>Nascimento</NavLink>
+            <NavLink to="/rcpn/casamento" onClick={closeMenu}>Casamento</NavLink>
+            <NavLink to="/rcpn/obito" onClick={closeMenu}>Óbito</NavLink>
+            <NavLink to="/rcpn/averbacoes" onClick={closeMenu}>Averbações e Anotações</NavLink>
+            <NavLink to="/rcpn/certidoes" onClick={closeMenu}>Certidões</NavLink>
+          </div>
         </div>
-      </div>
-	  
-	  {/* NOTAS COM SUBMENU */}
-      <div className="menu-notas" style={{ ...styles.dropdown, position: "relative" }}>
-        <NavLink to="/notas" style={styles.link}>
-          Notas <span style={styles.arrow}>▼</span>
+
+        {/* NOTAS COM SUBMENU */}
+        <div className="menu-dropdown">
+          <button 
+            className="menu-link dropdown-toggle"
+            onClick={() => setNotasOpen(!notasOpen)}
+          >
+            Notas 
+            <span className={`arrow ${notasOpen ? 'up' : ''}`}>▼</span>
+          </button>
+
+          <div className={`submenu ${notasOpen ? 'open' : ''}`}>
+            <NavLink to="/notas" onClick={closeMenu}>Introdução</NavLink>
+            <NavLink to="/notas/escrituras" onClick={closeMenu}>Escritura</NavLink>
+            <NavLink to="/notas/procuracao" onClick={closeMenu}>Procuração</NavLink>
+            <NavLink to="/notas/testamento" onClick={closeMenu}>Testamento</NavLink>
+            <NavLink to="/notas/inventario" onClick={closeMenu}>Inventário</NavLink>
+            <NavLink to="/notas/usucapiao" onClick={closeMenu}>Usucapião</NavLink>
+            <NavLink to="/notas/reconhecimentofirma" onClick={closeMenu}>Reconhecimento de Firma</NavLink>
+            <NavLink to="/notas/autenticacao" onClick={closeMenu}>Autenticação de Documento</NavLink>
+            <NavLink to="/notas/apostilahaia" onClick={closeMenu}>Apostila em HAIA</NavLink>
+          </div>
+        </div>
+
+        <NavLink to="/identidade" className="menu-link" onClick={closeMenu}>
+          2ª Via de Identidade
         </NavLink>
 
-        <div className="submenu-notas" style={styles.dropdownMenu}>
-          <NavLink to="/notas/escrituras">Escritura</NavLink>
-          <NavLink to="/notas/procuracao">Procuração</NavLink>
-          <NavLink to="/notas/testamento">Testamento</NavLink>
-          <NavLink to="/notas/inventario">Inventário</NavLink>
-          <NavLink to="/notas/usucapiao">Usucapião</NavLink>
-		  <NavLink to="/notas/reconhecimentofirma">Reconhecimento de Firma</NavLink>
-		  <NavLink to="/notas/autenticacao">Autenticação de Documento</NavLink>
-		  <NavLink to="/notas/apostilahaia">Apostila em HAIA</NavLink>
-        </div>
-      </div>
+        <NavLink to="/lgpd" className="menu-link" onClick={closeMenu}>
+          LGPD
+        </NavLink>
 
-      <NavLink to="/identidade" style={styles.link}>
-        2ª Via de Identidade
-      </NavLink>
+        <NavLink to="/links-uteis" className="menu-link" onClick={closeMenu}>
+          Links Úteis
+        </NavLink>
 
-      <NavLink to="/lgpd" style={styles.link}>
-        LGPD
-      </NavLink>
+        <NavLink to="/contato" className="menu-link" onClick={closeMenu}>
+          Contato
+        </NavLink>
 
-      <NavLink to="/links-uteis" style={styles.link}>
-        Links Úteis
-      </NavLink>
-
-      <NavLink to="/contato" style={styles.link}>
-        Contato
-      </NavLink>
-    </nav>
+      </nav>
+    </>
   );
 }
-const styles = {
-  menu: {
-    display: "flex",
-    gap: "24px",
-    alignItems: "center",
-    fontSize: "14px"
-  },
-
-  link: {
-    color: "#ffffff",
-    textDecoration: "none",
-    fontWeight: 500,
-    display: "flex",
-    alignItems: "center",
-    gap: 6
-  },
-
-  arrow: {
-    fontSize: 10,
-    opacity: 0.8
-  },
-
- dropdownMenu: {
-  position: "absolute",
-  top: "100%",
-  left: 0,
-  background: "#ffffff",
-  borderRadius: 10,
-  padding: "8px 0",
-  minWidth: 240,
-  boxShadow: "0 10px 24px rgba(0,0,0,0.18)",
-  zIndex: 1000
-}
-
-};

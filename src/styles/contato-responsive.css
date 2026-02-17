@@ -1,0 +1,152 @@
+/* ========================================
+   PÁGINA DE CONTATO - RESPONSIVIDADE
+   ======================================== */
+
+/* Desktop - já está ok no inline styles */
+
+/* ========================================
+   TABLET (< 968px)
+   ======================================== */
+
+@media (max-width: 968px) {
+  /* Ajustar títulos */
+  .page h1 {
+    font-size: 28px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .card h2 {
+    font-size: 20px !important;
+  }
+
+  /* Ajustar mapa */
+  .mapContainer iframe {
+    height: 350px !important;
+  }
+
+  /* Instagram grid */
+  .instagramGrid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 24px !important;
+  }
+}
+
+/* ========================================
+   MOBILE (< 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Página */
+  .page {
+    padding: 24px 16px !important;
+  }
+
+  /* Título */
+  .page h1 {
+    font-size: 26px !important;
+    margin-bottom: 28px !important;
+  }
+
+  /* Cards */
+  .card {
+    padding: 24px !important;
+    margin-bottom: 28px !important;
+  }
+
+  .card h2 {
+    font-size: 19px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .card p {
+    font-size: 14px !important;
+  }
+
+  /* Mapa */
+  .mapContainer iframe {
+    height: 300px !important;
+  }
+
+  /* WhatsApp button - ocupa largura total */
+  .whatsappButton {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px 20px !important;
+  }
+
+  /* Instagram grid - 1 coluna */
+  .instagramGrid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Instagram embeds */
+  .instagramGrid iframe {
+    height: 400px !important;
+  }
+}
+
+/* ========================================
+   MOBILE PEQUENO (< 480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+  /* Página */
+  .page {
+    padding: 20px 12px !important;
+  }
+
+  /* Título */
+  .page h1 {
+    font-size: 24px !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Cards */
+  .card {
+    padding: 20px !important;
+    margin-bottom: 24px !important;
+    border-radius: 8px !important;
+  }
+
+  .card h2 {
+    font-size: 18px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .card p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Mapa */
+  .mapContainer {
+    margin-top: 16px !important;
+  }
+
+  .mapContainer iframe {
+    height: 250px !important;
+  }
+
+  /* WhatsApp button */
+  .whatsappButton {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+  }
+
+  .whatsappIcon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Instagram link */
+  .instagramLink {
+    font-size: 16px !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Instagram embeds */
+  .instagramGrid iframe {
+    height: 360px !important;
+  }
+}

@@ -1,0 +1,64 @@
+/* ========================================
+   APP - LAYOUT PRINCIPAL RESPONSIVO
+   ======================================== */
+
+/* Desktop */
+main {
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+  min-height: calc(100vh - 200px);
+}
+
+main > div {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* ========================================
+   TABLET (< 968px)
+   ======================================== */
+
+@media (max-width: 968px) {
+  main {
+    padding: 30px 16px;
+  }
+
+  main > div {
+    padding: 30px;
+    border-radius: 4px;
+  }
+}
+
+/* ========================================
+   MOBILE (< 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+  main {
+    padding: 24px 12px;
+  }
+
+  main > div {
+    padding: 24px;
+    border-radius: 0; /* Remove bordas em mobile */
+  }
+}
+
+/* ========================================
+   MOBILE PEQUENO (< 480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+  main {
+    padding: 16px 8px;
+  }
+
+  main > div {
+    padding: 16px;
+    box-shadow: none; /* Remove sombra em telas pequenas */
+  }
+}

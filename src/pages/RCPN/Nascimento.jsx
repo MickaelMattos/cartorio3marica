@@ -1,160 +1,160 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Nascimento() {
   return (
-    <div style={styles.page}>
-      <h1 style={styles.title}>Registro de Nascimento</h1>
+    <>
+      <section className="content-section">
+        <h2 className="section-title">Gratuidade</h2>
+        <div className="success-box">
+          <p>
+            <strong>Importante:</strong> O registro de nascimento, bem como a primeira certidão, 
+            são <strong>GRATUITOS</strong>, conforme a legislação vigente.
+          </p>
+        </div>
+      </section>
 
-      <AnimatedSection title="Gratuidade">
-        <p>
-          O registro de nascimento, bem como a primeira certidão, são
-          <strong> GRATUITOS</strong>, conforme a legislação vigente.
-        </p>
-      </AnimatedSection>
-
-      <AnimatedSection title="Prazo para Registro">
+      <section className="content-section">
+        <h2 className="section-title">Prazo para Registro</h2>
         <p>O nascimento deve ser registrado:</p>
-
         <ul>
           <li>
             Até <strong>15 dias</strong> após o nascimento, quando ocorrido na
-            sede do distrito de Registro Civil;
+            sede do distrito de Registro Civil
           </li>
           <li>
             Até <strong>3 meses</strong> após o nascimento, quando ocorrido fora
-            da sede do distrito de Registro Civil.
+            da sede do distrito de Registro Civil
           </li>
         </ul>
 
-        <p>O registro pode ser feito no Serviço de Registro Civil:</p>
-
-        <ul>
-          <li>Da área onde ocorreu o nascimento; ou</li>
-          <li>Da área de residência dos pais.</li>
-        </ul>
+        <div className="info-box">
+          <p>
+            O registro pode ser feito no Serviço de Registro Civil da área onde 
+            ocorreu o nascimento ou da área de residência dos pais.
+          </p>
+        </div>
 
         <p>
           <strong>Observação:</strong> Quando depender do comparecimento da mãe
           para o registro, o prazo poderá ser prorrogado, conforme as
           circunstâncias específicas do caso.
         </p>
-      </AnimatedSection>
+      </section>
 
-      <AnimatedSection title="Registro Após o Prazo Legal">
+      <section className="content-section">
+        <h2 className="section-title">Registro Após o Prazo Legal</h2>
         <p>
           Mesmo após o decurso do prazo legal, o registro de nascimento ainda
           poderá ser realizado no Serviço de Registro Civil da área de
           residência dos pais, observadas as normas legais vigentes.
         </p>
-      </AnimatedSection>
+      </section>
 
-      <AnimatedSection title="Como Registrar um Nascimento">
+      <section className="content-section">
+        <h2 className="section-title">Como Registrar um Nascimento</h2>
         <p>Para registrar o nascimento de uma criança são necessários:</p>
-
         <ul>
           <li>
             <strong>Declaração de Nascido Vivo (DNV)</strong> original, emitida
             pelo estabelecimento de saúde onde ocorreu o nascimento ou por
-            médico habilitado que tenha assistido o parto;
+            médico habilitado que tenha assistido o parto
           </li>
-          <li>Documentos pessoais originais que identifiquem os pais;</li>
+          <li>Documentos pessoais originais que identifiquem os pais</li>
           <li>
             Comprovante de residência poderá ser solicitado quando o registro
-            não for realizado no local de nascimento e houver dúvidas sobre a
-            competência territorial.
+            não for realizado no local de nascimento
           </li>
         </ul>
-      </AnimatedSection>
+      </section>
 
-      <AnimatedSection title="Pais Casados Civilmente">
-        <p>
-          Basta a presença do pai ou da mãe da criança, munido de:
-        </p>
-
+      <section className="content-section">
+        <h2 className="section-title">Pais Casados Civilmente</h2>
+        <p>Basta a presença do pai ou da mãe da criança, munido de:</p>
         <ul>
-          <li>Documento de Identificação (original);</li>
-          <li>Certidão de Casamento (original);</li>
-          <li>Declaração de Nascido Vivo – DNV (original).</li>
+          <li>Documento de Identificação (original)</li>
+          <li>Certidão de Casamento (original)</li>
+          <li>Declaração de Nascido Vivo – DNV (original)</li>
         </ul>
-      </AnimatedSection>
+      </section>
 
-      <AnimatedSection title="Pais Não Casados ou Sem Certidão de Casamento">
-        <p>
-          <strong>Comparecimento do pai:</strong>
-        </p>
-
+      <section className="content-section">
+        <h2 className="section-title">Pais Não Casados ou Sem Certidão de Casamento</h2>
+        
+        <h3 className="section-subtitle">Comparecimento do Pai</h3>
         <ul>
-          <li>Documento de Identificação próprio (original);</li>
-          <li>Declaração de Nascido Vivo (original);</li>
-          <li>Documento de Identificação da mãe (original).</li>
+          <li>Documento de Identificação próprio (original)</li>
+          <li>Declaração de Nascido Vivo (original)</li>
+          <li>Documento de Identificação da mãe (original)</li>
         </ul>
-
         <p>
           O funcionário do Cartório poderá exigir o comparecimento da mãe
           quando julgar necessário para esclarecimentos.
         </p>
 
-        <p>
-          <strong>Comparecimento da mãe:</strong>
-        </p>
-
+        <h3 className="section-subtitle">Comparecimento da Mãe</h3>
         <ul>
-          <li>Documento de Identificação (original);</li>
-          <li>Declaração de Nascido Vivo (original).</li>
+          <li>Documento de Identificação (original)</li>
+          <li>Declaração de Nascido Vivo (original)</li>
         </ul>
-      </AnimatedSection>
+      </section>
 
-      <AnimatedSection title="Capacidade do Declarante">
+      <section className="content-section">
+        <h2 className="section-title">Capacidade do Declarante</h2>
         <ul>
           <li>
             Maiores de <strong>16 anos</strong> podem declarar maternidade e
-            paternidade sem assistência de pais ou responsáveis;
+            paternidade sem assistência de pais ou responsáveis
           </li>
           <li>
             Menores de <strong>16 anos</strong> devem estar acompanhados do
-            representante legal.
+            representante legal
           </li>
         </ul>
-      </AnimatedSection>
+      </section>
 
-      <AnimatedSection title="Nome">
+      <section className="content-section">
+        <h2 className="section-title">Nome</h2>
         <p>
           O nome é constituído de dois elementos:
           <strong> prenome</strong> (ou nome próprio) e
           <strong> sobrenome</strong> (ou patronímico ou apelido de família).
         </p>
 
-        <h3 style={styles.subTitle}>Prenome</h3>
+        <h3 className="section-subtitle">Prenome</h3>
         <ul>
-          <li>Escolhido livremente pelos pais, observando o bom senso;</li>
-          <li>Não deve ser ridículo, vexatório ou causar constrangimento;</li>
+          <li>Escolhido livremente pelos pais, observando o bom senso</li>
+          <li>Não deve ser ridículo, vexatório ou causar constrangimento</li>
           <li>
             Pode ser simples (João, Luzia, Pedro, Clarice) ou composto (Maria
-            Aparecida, José Carlos, Pedro Henrique).
+            Aparecida, José Carlos, Pedro Henrique)
           </li>
         </ul>
 
-        <h3 style={styles.subTitle}>Sobrenome</h3>
+        <h3 className="section-subtitle">Sobrenome</h3>
         <ul>
-          <li>É composto pelos sobrenomes dos pais;</li>
+          <li>É composto pelos sobrenomes dos pais</li>
           <li>
             Tradicionalmente o sobrenome paterno vem por último, mas não há
-            obrigatoriedade;
+            obrigatoriedade
           </li>
           <li>
-            Não é permitido criar sobrenomes novos ou estranhos à família.
+            Não é permitido criar sobrenomes novos ou estranhos à família
           </li>
         </ul>
-      </AnimatedSection>
+      </section>
 
-      <AnimatedSection title="Registro de CPF">
-        <p>
-          Os registros de nascimento já incluem automaticamente a inscrição
-          do <strong>CPF</strong> da criança.
-        </p>
-      </AnimatedSection>
+      <section className="content-section">
+        <h2 className="section-title">Registro de CPF</h2>
+        <div className="highlight-box">
+          <p>
+            Os registros de nascimento já incluem automaticamente a inscrição
+            do <strong>CPF</strong> da criança.
+          </p>
+        </div>
+      </section>
 
-      <AnimatedSection title="Base Legal e Informações Importantes">
+      <section className="content-section">
+        <h2 className="section-title">Base Legal e Informações Importantes</h2>
         <p>
           Este conteúdo está fundamentado na Lei nº 6.015/1973 (Lei de Registros
           Públicos).
@@ -164,70 +164,7 @@ export default function Nascimento() {
           sempre o Cartório de Registro Civil competente ou o Código de Normas
           Extrajudicial vigente em sua região.
         </p>
-      </AnimatedSection>
-    </div>
+      </section>
+    </>
   );
 }
-
-/* ======================= */
-/* COMPONENTE ANIMADO */
-/* ======================= */
-
-function AnimatedSection({ title, children }) {
-  const [hover, setHover] = useState(false);
-
-  return (
-    <section
-      style={{
-        ...styles.section,
-        transform: hover ? "scale(1.02)" : "scale(1)"
-      }}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      <h2 style={styles.sectionTitle}>{title}</h2>
-      {children}
-    </section>
-  );
-}
-
-/* ======================= */
-/* ESTILOS */
-/* ======================= */
-
-const styles = {
-  page: {
-    maxWidth: 1000,
-    margin: "0 auto",
-    padding: "40px 20px",
-    color: "#eaeaea"
-  },
-
-  title: {
-    color: "rgb(191,167,106)",
-    marginBottom: 40,
-    textAlign: "center",
-    fontSize: 32
-  },
-
-  section: {
-    background: "#1f2f2b",
-    padding: 30,
-    borderRadius: 14,
-    marginBottom: 30,
-    transition: "transform 0.25s ease"
-  },
-
-  sectionTitle: {
-    color: "rgb(191,167,106)",
-    marginBottom: 15,
-    fontSize: 22
-  },
-
-  subTitle: {
-    color: "#d6c28b",
-    marginTop: 20,
-    marginBottom: 10,
-    fontSize: 18
-  }
-};

@@ -1,6 +1,7 @@
 import React from "react";
 import whatsappIcon from "../assets/images/whatsapp.png";
 import InstagramEmbed from "../components/InstagramEmbed";
+import "../styles/contato-responsive.css";
 
 export default function Contato() {
   const instagramPosts = [
@@ -51,6 +52,7 @@ export default function Contato() {
           target="_blank"
           rel="noopener noreferrer"
           style={styles.whatsappButton}
+          className="whatsapp-hover"
         >
           <img src={whatsappIcon} alt="WhatsApp" style={styles.whatsappIcon} />
           <span>(21) 96954-2636</span>
@@ -83,20 +85,19 @@ export default function Contato() {
     </div>
   );
 }
+
 const styles = {
   page: {
     maxWidth: "1200px",
     margin: "0 auto",
     padding: "40px 20px"
   },
-
   title: {
     fontSize: "32px",
     marginBottom: "40px",
     color: "rgb(31,47,43)",
     textAlign: "center"
   },
-
   card: {
     backgroundColor: "#ffffff",
     padding: "30px",
@@ -104,31 +105,27 @@ const styles = {
     marginBottom: "40px",
     boxShadow: "0 4px 12px rgba(0,0,0,0.05)"
   },
-
   cardTitle: {
     fontSize: "22px",
     marginBottom: "20px",
     color: "rgb(31,47,43)"
   },
-
   text: {
     lineHeight: 1.6,
     marginBottom: "20px",
     color: "#333"
   },
-
   mapContainer: {
     borderRadius: "10px",
     overflow: "hidden",
-    border: "1px solid #ddd"
+    border: "1px solid #ddd",
+    marginTop: "20px"
   },
-
   map: {
     width: "100%",
     height: "420px",
     border: "0"
   },
-
   whatsappButton: {
     display: "inline-flex",
     alignItems: "center",
@@ -141,23 +138,23 @@ const styles = {
     textDecoration: "none",
     transition: "transform 0.2s ease"
   },
-
   whatsappIcon: {
     width: "28px",
     height: "28px"
   },
-
   instagramLink: {
     display: "inline-block",
     marginBottom: "30px",
     fontWeight: "600",
     color: "#1f2f2b",
-    textDecoration: "none"
+    textDecoration: "none",
+    fontSize: "18px"
   },
-
   instagramGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
     gap: "30px"
   }
 };
+
+// Estilos responsivos aplicados via CSS externo

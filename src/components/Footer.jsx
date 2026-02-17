@@ -6,7 +6,7 @@ import shieldIcon from "../assets/images/shield.png";
 import googleIcon from "../assets/images/google.png";
 
 export default function Footer() {
-	const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <footer className="footer">
 
@@ -71,9 +71,7 @@ export default function Footer() {
               <span>Verificado pelo Google</span>
             </div>
           </div>
-		</div>
-		
-		
+        </div>
 
       </div>
 

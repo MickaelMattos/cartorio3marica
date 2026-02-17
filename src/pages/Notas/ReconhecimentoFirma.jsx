@@ -1,219 +1,288 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function reconhecimentofirma() {
+export default function ReconhecimentoFirma() {
   return (
-        <div style={styles.page}>
-      <h1 style={styles.title}>Abertura e Reconhecimento de Firma</h1>
-
-      {/* ABERTURA DE FIRMAS */}
-      <AnimatedSection title="Abertura de Firma">
+    <>
+      <section className="content-section">
+        <h2 className="section-title">O que é Reconhecimento de Firma</h2>
         <p>
-          A abertura de firma consiste no depósito, em Cartório, do padrão
-          de assinatura de uma pessoa, que ficará arquivado para fins de
-          conferência futura.
+          O reconhecimento de firma é o ato pelo qual o <strong>tabelião certifica 
+          a autenticidade de uma assinatura</strong> aposta em documento, conferindo 
+          fé pública e segurança jurídica ao ato.
         </p>
-
         <p>
-          Atenção: Para pessoas com limitações na capacidade de leitura e
-          escrita, devem ser observadas cautelas especiais para garantir
-          a segurança jurídica, podendo ser necessária a lavratura de
-          procuração pública, conforme as circunstâncias do caso,
-          nos termos do Código de Normas da Corregedoria Geral da Justiça
-          do Estado do Rio de Janeiro – Parte Extrajudicial.
+          Este serviço é essencial para validar contratos, procurações, declarações 
+          e diversos documentos que exigem comprovação da autenticidade da assinatura.
         </p>
-      </AnimatedSection>
+      </section>
 
-      {/* DOCUMENTOS PARA ABERTURA */}
-      <AnimatedSection title="Documentos Necessários para Abertura de Firma">
+      <section className="content-section">
+        <h2 className="section-title">Modalidades de Reconhecimento de Firma</h2>
+
+        <h3 className="section-subtitle">1. Reconhecimento por Semelhança</h3>
+        <p>
+          O tabelião compara a assinatura do documento com a <strong>ficha de firma</strong> 
+          (modelo de assinatura) previamente cadastrada no cartório, atestando que são semelhantes.
+        </p>
+        <p><strong>Quando usar:</strong></p>
         <ul>
-          <li>
-            Documento de identidade original com foto e CPF; ou
-          </li>
-          <li>
-            Carteira Nacional de Habilitação (CNH) que contenha CPF.
-          </li>
+          <li>Contratos particulares</li>
+          <li>Declarações diversas</li>
+          <li>Autorizações</li>
+          <li>Documentos gerais que exigem firma reconhecida</li>
         </ul>
-      </AnimatedSection>
+        <div className="info-box">
+          <p>
+            <strong>Importante:</strong> O tabelião certifica apenas a <strong>semelhança 
+            da assinatura</strong>, não presenciou o ato de assinar nem atesta o conteúdo 
+            do documento.
+          </p>
+        </div>
 
-      {/* ESTRANGEIROS */}
-      <AnimatedSection title="Estrangeiros Podem Abrir Firma?">
+        <h3 className="section-subtitle">2. Reconhecimento por Autenticidade (ou por Verdade)</h3>
         <p>
-          Sim.
+          O signatário comparece <strong>pessoalmente</strong> ao cartório e assina o 
+          documento <strong>na presença do tabelião</strong>, que certifica que aquela 
+          pessoa, identificada por documento oficial, assinou naquele momento.
+        </p>
+        <p><strong>Quando usar:</strong></p>
+        <ul>
+          <li>Procurações</li>
+          <li>Contratos de grande valor</li>
+          <li>Transferências de veículos</li>
+          <li>Documentos que exigem maior segurança</li>
+          <li>Quando expressamente solicitado por órgão ou instituição</li>
+        </ul>
+        <div className="highlight-box">
+          <p>
+            Esta modalidade oferece <strong>maior segurança</strong>, pois o tabelião 
+            presencia o ato e identifica o signatário.
+          </p>
+        </div>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Abertura de Firma (Cadastro de Assinatura)</h2>
+        <p>
+          Para realizar reconhecimento de firma por semelhança, é necessário ter 
+          <strong> firma aberta</strong> (assinatura cadastrada) no cartório.
+        </p>
+
+        <h3 className="section-subtitle">Como Abrir Firma</h3>
+        <ol>
+          <li>Comparecer pessoalmente ao cartório</li>
+          <li>Apresentar documento oficial com foto (RG, CNH ou Passaporte)</li>
+          <li>Apresentar CPF</li>
+          <li>Assinar na ficha de firma do cartório (geralmente 3 vezes)</li>
+          <li>Pagar emolumento (valor tabelado)</li>
+        </ol>
+
+        <div className="success-box">
+          <p>
+            <strong>Atenção:</strong> A firma aberta em um cartório é válida apenas naquele 
+            cartório. Para reconhecer firma em outro cartório, é necessário abrir firma 
+            novamente.
+          </p>
+        </div>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Documentos que Exigem Reconhecimento de Firma</h2>
+        <ul>
+          <li>Procurações</li>
+          <li>Contratos de compra e venda</li>
+          <li>Contratos de locação</li>
+          <li>Autorizações (viagem de menor, etc.)</li>
+          <li>Declarações de residência</li>
+          <li>Transferências de veículos</li>
+          <li>Documentos para órgãos públicos</li>
+          <li>Contratos bancários</li>
+          <li>Cessões de direitos</li>
+        </ul>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Procedimento para Reconhecimento</h2>
+
+        <h3 className="section-subtitle">Reconhecimento por Semelhança</h3>
+        <ol>
+          <li>Ter firma aberta no cartório</li>
+          <li>Assinar o documento (pode ser antes de ir ao cartório)</li>
+          <li>Levar o documento ao cartório</li>
+          <li>Cartório confere assinatura com ficha de firma</li>
+          <li>Tabelião apõe carimbo de reconhecimento</li>
+          <li>Pagar emolumento</li>
+        </ol>
+
+        <h3 className="section-subtitle">Reconhecimento por Autenticidade</h3>
+        <ol>
+          <li>Comparecer pessoalmente ao cartório <strong>SEM ASSINAR</strong> o documento</li>
+          <li>Apresentar documento oficial com foto</li>
+          <li>Assinar o documento na presença do tabelião ou preposto</li>
+          <li>Tabelião certifica a autenticidade</li>
+          <li>Pagar emolumento</li>
+        </ol>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Documentos Necessários</h2>
+        
+        <h3 className="section-subtitle">Para Abertura de Firma</h3>
+        <ul>
+          <li>RG, CNH ou Passaporte (original)</li>
+          <li>CPF</li>
+        </ul>
+
+        <h3 className="section-subtitle">Para Reconhecimento por Semelhança</h3>
+        <ul>
+          <li>Documento já assinado</li>
+          <li>Firma já aberta no cartório</li>
+        </ul>
+
+        <h3 className="section-subtitle">Para Reconhecimento por Autenticidade</h3>
+        <ul>
+          <li>Documento SEM assinatura</li>
+          <li>RG, CNH ou Passaporte (original)</li>
+          <li>CPF (quando solicitado)</li>
+        </ul>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Validade do Reconhecimento</h2>
+        <p>
+          O reconhecimento de firma <strong>não possui prazo de validade</strong>. 
+          Ele certifica que, na data do reconhecimento, a assinatura era autêntica 
+          ou semelhante ao padrão cadastrado.
+        </p>
+        <p>
+          No entanto, o <strong>documento</strong> pode ter prazo de validade próprio, 
+          conforme sua finalidade (ex: procurações podem ter prazo determinado).
+        </p>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Situações Especiais</h2>
+
+        <h3 className="section-subtitle">Pessoa que Não Sabe ou Não Pode Assinar</h3>
+        <p>
+          Nestes casos, não é possível fazer reconhecimento de firma. A solução é 
+          lavrar <strong>escritura pública</strong> no Cartório de Notas, onde a pessoa 
+          comparece e um terceiro assina "a rogo" (em nome dela).
+        </p>
+
+        <h3 className="section-subtitle">Documentos em Língua Estrangeira</h3>
+        <p>
+          É possível reconhecer firma em documentos estrangeiros, mas o tabelião 
+          não certifica o conteúdo, apenas a assinatura.
+        </p>
+
+        <h3 className="section-subtitle">Reconhecimento de Firma Digital</h3>
+        <p>
+          Alguns cartórios oferecem reconhecimento de firma eletrônica/digital, 
+          mediante uso de assinatura digital ICP-Brasil.
+        </p>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Custos</h2>
+        <p>
+          Os valores são tabelados por cada estado e incluem:
         </p>
         <ul>
-          <li>
-            Estrangeiro com visto permanente: apresentar Registro Nacional
-            de Estrangeiro válido.
-          </li>
-          <li>
-            Estrangeiro com visto temporário: apresentar passaporte com
-            visto válido.
-          </li>
+          <li><strong>Abertura de firma:</strong> valor fixo</li>
+          <li><strong>Reconhecimento por semelhança:</strong> valor por assinatura</li>
+          <li><strong>Reconhecimento por autenticidade:</strong> valor maior (pela 
+              presença do signatário)</li>
         </ul>
-      </AnimatedSection>
 
-      {/* DEFICIENTE VISUAL */}
-      <AnimatedSection title="Pessoa com Deficiência Visual">
-        <p>
-          A pessoa com deficiência visual pode abrir firma, desde que
-          compareça ao Cartório acompanhada de 2 (duas) testemunhas,
-          que também deverão assinar o cartão de firma e apresentar
-          documentos de identificação válidos.
-        </p>
-      </AnimatedSection>
+        <div className="warning-box">
+          <p>
+            <strong>Atenção:</strong> Se houver múltiplas assinaturas no mesmo documento, 
+            cada reconhecimento é cobrado separadamente.
+          </p>
+        </div>
+      </section>
 
-      {/* RECONHECIMENTO DE FIRMA */}
-      <AnimatedSection title="Reconhecimento de Firma">
-        <p>
-          O reconhecimento de firma é a declaração do tabelião, ou de
-          seu substituto ou escrevente autorizado, de que a assinatura
-          constante em determinado documento pertence ao signatário
-          que possui cartão de firma arquivado no Cartório.
-        </p>
-      </AnimatedSection>
-
-      {/* FORMAS DE RECONHECIMENTO */}
-      <AnimatedSection title="Formas de Reconhecimento">
-        <h3 style={styles.subTitle}>Reconhecimento por Autenticidade</h3>
-        <p>
-          Exige que o signatário assine o documento na presença do
-          tabelião ou preposto autorizado, que certificará esse fato.
-        </p>
-
-        <h3 style={styles.subTitle}>Reconhecimento por Semelhança</h3>
-        <p>
-          O tabelião declara que a assinatura constante no documento é
-          semelhante ao padrão de assinatura arquivado no cartão de firma.
-        </p>
-      </AnimatedSection>
-
-      {/* IMPORTANTE */}
-      <AnimatedSection title="Importante">
+      <section className="content-section">
+        <h2 className="section-title">Reconhecimento de Firma x Autenticação</h2>
+        <p>São serviços diferentes:</p>
         <ul>
-          <li>
-            É proibido reconhecer firma em documento sem data,
-            incompleto ou que contenha espaços em branco.
-          </li>
-          <li>
-            É permitido o reconhecimento de firma em documento redigido
-            em idioma estrangeiro.
-          </li>
+          <li><strong>Reconhecimento de firma:</strong> Certifica a <strong>autenticidade 
+              da assinatura</strong></li>
+          <li><strong>Autenticação:</strong> Certifica que a <strong>cópia é fiel ao 
+              original</strong></li>
         </ul>
         <p>
-          Disposições conforme o Código de Normas da Corregedoria Geral
-          da Justiça do Estado do Rio de Janeiro – Parte Extrajudicial.
+          Em alguns casos, um documento pode necessitar de ambos os serviços.
         </p>
-      </AnimatedSection>
+      </section>
 
-      {/* FINALIDADE */}
-      <AnimatedSection title="Finalidade do Reconhecimento de Firma">
+      <section className="content-section">
+        <h2 className="section-title">Cancelamento ou Revogação</h2>
         <p>
-          O reconhecimento de firma garante segurança às partes e a
-          terceiros, assegurando que a assinatura aposta no documento
-          pertence efetivamente ao signatário que possui firma depositada
-          no Cartório, conferindo credibilidade e fé pública ao ato.
+          O reconhecimento de firma é <strong>ato definitivo</strong> e não pode ser 
+          cancelado. Se um documento com firma reconhecida precisa ser invalidado, 
+          deve-se revogar o próprio documento (por exemplo, revogação de procuração).
         </p>
-      </AnimatedSection>
+      </section>
 
-      {/* OBRIGATORIEDADE */}
-      <AnimatedSection title="Quando é Obrigatório o Reconhecimento por Autenticidade">
+      <section className="content-section">
+        <h2 className="section-title">Recusa de Reconhecimento</h2>
+        <p>
+          O tabelião pode recusar reconhecimento de firma quando:
+        </p>
         <ul>
-          <li>Nos casos expressamente previstos em lei;</li>
-          <li>Quando exigido por órgão público ou entidade privada;</li>
-          <li>Na alienação de veículo;</li>
-          <li>Quando as partes assim desejarem.</li>
+          <li>A assinatura não confere com a ficha de firma</li>
+          <li>Há suspeita de falsificação</li>
+          <li>O documento contém ilegalidades evidentes</li>
+          <li>Falta documentação necessária</li>
         </ul>
-      </AnimatedSection>
+      </section>
 
-      {/* DOCUMENTOS PARA RECONHECIMENTO */}
-      <AnimatedSection title="Documentos Necessários para Reconhecimento">
+      <section className="content-section">
+        <h2 className="section-title">Atualização de Firma</h2>
+        <p>
+          Se a assinatura da pessoa mudou com o tempo, é recomendável atualizar a 
+          ficha de firma no cartório para evitar divergências.
+        </p>
+        <p>
+          Para atualizar, basta comparecer ao cartório com documento de identidade 
+          e assinar nova ficha.
+        </p>
+      </section>
+
+      <section className="content-section">
+        <h2 className="section-title">Dicas Importantes</h2>
         <ul>
-          <li>
-            Documento original assinado cuja firma se pretende reconhecer,
-            contendo a identificação do signatário.
-          </li>
+          <li>Mantenha sua assinatura sempre padronizada</li>
+          <li>Para maior segurança, prefira reconhecimento por autenticidade</li>
+          <li>Sempre leia o documento antes de assinar</li>
+          <li>Guarde cópia de documentos importantes com firma reconhecida</li>
+          <li>Verifique qual modalidade o órgão destinatário exige</li>
         </ul>
-      </AnimatedSection>
+      </section>
 
-      {/* OBSERVAÇÕES FINAIS */}
-      <AnimatedSection title="Observações">
+      <section className="content-section">
+        <h2 className="section-title">Base Legal</h2>
         <p>
-          O maior de 16 anos e menor de 18 anos poderá abrir firma
-          desde que emancipado (judicial ou extrajudicialmente) ou
-          assistido por seus responsáveis legais, nos termos dos
-          artigos 1.634, inciso V, e 1.690 do Código Civil.
+          Lei nº 8.935/1994 (Lei dos Cartórios), Código Civil Brasileiro, Código de 
+          Normas da Corregedoria Geral da Justiça de cada estado, Provimentos do 
+          Conselho Nacional de Justiça.
         </p>
+      </section>
 
-        <p>
-          Texto atualizado conforme o Código de Normas da Corregedoria
-          Geral da Justiça do Estado do Rio de Janeiro – Parte
-          Extrajudicial, vigente a partir de 2023, com alterações
-          posteriores até junho de 2025.
-        </p>
-      </AnimatedSection>
-    </div>
+      <div className="whatsapp-contact">
+        <p>Para abrir firma ou reconhecer assinaturas, entre em contato:</p>
+        <a
+          href="https://wa.me/5521991633030"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-button"
+        >
+          <img src="/src/assets/images/whatsapp.png" alt="WhatsApp" />
+          <span>(21) 99163-3030</span>
+        </a>
+      </div>
+    </>
   );
 }
-
-/* ======================= */
-/* COMPONENTE ANIMADO */
-/* ======================= */
-
-function AnimatedSection({ title, children }) {
-  const [hover, setHover] = useState(false);
-
-  return (
-    <section
-      style={{
-        ...styles.section,
-        transform: hover ? "scale(1.02)" : "scale(1)"
-      }}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      <h2 style={styles.sectionTitle}>{title}</h2>
-      {children}
-    </section>
-  );
-}
-
-/* ======================= */
-/* ESTILOS */
-/* ======================= */
-
-const styles = {
-  page: {
-    maxWidth: 1000,
-    margin: "0 auto",
-    padding: "40px 20px",
-    color: "#eaeaea"
-  },
-
-  title: {
-    color: "rgb(191,167,106)",
-    marginBottom: 40,
-    textAlign: "center",
-    fontSize: 32
-  },
-
-  section: {
-    background: "#1f2f2b",
-    padding: 30,
-    borderRadius: 14,
-    marginBottom: 30,
-    transition: "transform 0.25s ease"
-  },
-
-  sectionTitle: {
-    color: "rgb(191,167,106)",
-    marginBottom: 15,
-    fontSize: 22
-  },
-
-  subTitle: {
-    color: "#d6c28b",
-    marginTop: 10,
-    marginBottom: 10,
-    fontSize: 18
-  }
-};
