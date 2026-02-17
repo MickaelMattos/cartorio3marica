@@ -4,6 +4,7 @@ import "../styles/pages-clean.css";
 import rcpnImg from "../assets/images/RCPN.png";
 import notasImg from "../assets/images/NOTAS.png";
 import identidadeImg from "../assets/images/identidade.png";
+import whatsappImg from "../assets/images/whatsapp.png";
 
 /* ============================================================
    HOME — ANIMAÇÃO "LIQUID REVEAL"
