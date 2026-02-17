@@ -261,19 +261,6 @@ export default function Autenticacao() {
           Conselho Nacional de Justiça.
         </p>
       </section>
-
-      <div className="whatsapp-contact">
-        <p>Para autenticar documentos ou tirar dúvidas, entre em contato:</p>
-        <a
-          href="https://wa.me/5521991633030"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="whatsapp-button"
-        >
-          <img src="/src/assets/images/whatsapp.png" alt="WhatsApp" />
-          <span>(21) 99163-3030</span>
-        </a>
-      </div>
     </>
   );
 }
