@@ -28,8 +28,8 @@
 
 /* ================= TEMA ESCURO ================= */
 [data-theme="dark"] {
-  --bg-page: #2e2e2e;
-  --bg-card: #2e2e2e;          /* Card = página — sem sobra clara */
+  --bg-page: #1a1F1F;
+  --bg-card: #1e1e1e;          /* Card = página — sem sobra clara */
   --bg-section: #363636;       /* Sections levemente elevadas */
   --bg-nav: #2e2e2e;
   --text-primary: #f5f5f5;     /* Muito legível */
@@ -39,7 +39,7 @@
   --border-color: #505050;
   --accent: #bfa76a;           /* DOURADO — NUNCA MUDA */
   --accent-rgb: 191, 167, 106;
-  --shadow: rgba(0, 0, 0, 0.0);/* Sem sombra — card e fundo iguais */
+  --shadow: rgba(0, 0, 0, 0.08);/* Sem sombra — card e fundo iguais */
   --input-bg: #3e3e3e;
   --input-border: #606060;
   --submenu-bg: #383838;

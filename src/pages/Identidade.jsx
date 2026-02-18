@@ -26,7 +26,7 @@ export default function Identidade() {
 
       {/* APRESENTAÇÃO */}
       <section className="content-section reveal" style={{ textAlign: "center" }}>
-        <p style={{ fontSize: "18px", lineHeight: 1.7, color: "#444", marginBottom: "16px" }}>
+        <p style={{ fontSize: "18px", lineHeight: 1.7, color: "var(--text-secondary)", marginBottom: "16px" }}>
           Atendimento para emissão de 2ª via do RG do Estado do Rio de Janeiro,
           sem agendamento, por ordem de chegada.
         </p>

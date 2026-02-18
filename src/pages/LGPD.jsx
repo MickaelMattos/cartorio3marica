@@ -27,7 +27,7 @@ export default function LGPD() {
 
       {/* INTRO */}
       <section className="content-section reveal" style={{ textAlign: "center" }}>
-        <p style={{ fontSize: "18px", lineHeight: 1.7, color: "#444" }}>
+        <p style={{ fontSize: "18px", lineHeight: 1.7, color: "var(--text-secondary)" }}>
           O Cartório do 3º Distrito de Maricá atua com transparência,
           responsabilidade e segurança no tratamento de dados pessoais.
         </p>
@@ -104,7 +104,7 @@ export default function LGPD() {
       {/* SOLICITAÇÃO */}
       <section className="content-section reveal" style={{ textAlign: "center" }}>
         <h2 className="section-title">Solicitação de Informações</h2>
-        <p style={{ color: "#555", marginBottom: "24px" }}>
+        <p style={{ color: "var(--text-secondary)", marginBottom: "24px" }}>
           Para exercer seus direitos, encaminhe solicitação formal
           acompanhada de documento de identificação.
         </p>

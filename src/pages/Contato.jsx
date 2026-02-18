@@ -276,7 +276,7 @@ export default function Contato() {
         .horario-toggle {
           background: none;
           border: 1px solid rgba(191, 167, 106, 0.4);
-          color: rgb(171, 147, 86);
+          color: var(--text-secondary);
           padding: 8px 16px;
           border-radius: 20px;
           font-size: 13px;
@@ -331,8 +331,8 @@ export default function Contato() {
           color: rgb(191, 167, 106);
         }
 
-        .horario-dia  { color: #444; }
-        .horario-hora { color: #555; font-weight: 500; }
+        .horario-dia  { color: var(--text-secondary); }
+        .horario-hora { color: var(--text-secondary); font-weight: 500; }
         .horario-hora.fechado-text { color: #c0392b; font-weight: 400; }
         .horario-row.hoje .horario-dia { color: rgb(191, 167, 106); }
 
@@ -361,13 +361,13 @@ export default function Contato() {
         .avaliacoes-nota-grande {
           font-size: 52px;
           font-weight: 700;
-          color: rgb(31, 47, 43);
+          color: var(--text-primary);
           line-height: 1;
         }
 
         .avaliacoes-total {
           font-size: 13px;
-          color: #888;
+          color: var(--text-muted);
           margin-top: 4px;
         }
 
@@ -381,7 +381,7 @@ export default function Contato() {
           border-radius: 20px;
           font-size: 12px;
           font-weight: 600;
-          color: #555;
+          color: var(--text-secondary);
           text-decoration: none;
           margin-left: auto;
           transition: all 0.2s ease;
@@ -400,7 +400,7 @@ export default function Contato() {
         }
 
         .avaliacao-card {
-          background: #f9f9f7;
+          background: var(--bg-section); border: 1px solid var(--border-color);
           border-radius: 12px;
           padding: 20px;
           border: 1px solid rgba(0,0,0,0.06);
@@ -433,9 +433,9 @@ export default function Contato() {
           flex-shrink: 0;
         }
 
-        .avaliacao-nome  { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 2px; }
-        .avaliacao-tempo { font-size: 12px; color: #999; }
-        .avaliacao-texto { font-size: 14px; color: #555; line-height: 1.6; margin-top: 10px; }
+        .avaliacao-nome  { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
+        .avaliacao-tempo { font-size: 12px; color: var(--text-muted); }
+        .avaliacao-texto { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-top: 10px; }
 
         .avaliacoes-cta {
           text-align: center;
@@ -491,7 +491,7 @@ export default function Contato() {
 
         .info-item-icon    { font-size: 22px; flex-shrink: 0; line-height: 1; }
         .info-item-label   { font-size: 11px; font-weight: 600; color: rgb(191,167,106); text-transform: uppercase; letter-spacing: 0.8px; }
-        .info-item-value   { font-size: 14px; color: #444; line-height: 1.5; margin-top: 3px; }
+        .info-item-value   { font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 3px; }
 
         /* ══════════ INSTAGRAM ══════════ */
         .instagram-header {
@@ -551,7 +551,7 @@ export default function Contato() {
         ══════════════════════════════════════════ */}
         <section className="content-section" style={{ textAlign: "center" }}>
           <h2 className="section-title">💬 Fale pelo WhatsApp</h2>
-          <p style={{ color: "#555", marginBottom: "24px", fontSize: "15px" }}>
+          <p style={{ color: "var(--text-secondary)", marginBottom: "24px", fontSize: "15px" }}>
             Atendimento rápido pelo WhatsApp. Clique e inicie uma conversa agora.
           </p>
           <div className="wa-btn-wrap">
@@ -667,7 +667,7 @@ export default function Contato() {
         ══════════════════════════════════════════ */}
         <section className="content-section">
           <h2 className="section-title">🗺️ Localização</h2>
-          <p style={{ color: "#666", fontSize: "14px", marginBottom: "16px" }}>
+          <p style={{ color: "var(--text-secondary)", fontSize: "14px", marginBottom: "16px" }}>
             Av. Gilberto de Carvalho, Lote C-25, Inoã, Maricá – RJ
           </p>
           <iframe
@@ -740,7 +740,7 @@ export default function Contato() {
         <section className="content-section">
           <h2 className="section-title">📸 Instagram Oficial</h2>
 
-          <p style={{ color: "#555", marginBottom: "16px", fontSize: "15px" }}>
+          <p style={{ color: "var(--text-secondary)", marginBottom: "16px", fontSize: "15px" }}>
             Acompanhe comunicados e informações oficiais:
           </p>
 

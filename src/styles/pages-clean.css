@@ -198,7 +198,7 @@
   margin: 0;
   font-weight: 600;
   font-size: 18px;
-  color: rgb(31, 47, 43);
+  color: var(--text-primary);
 }
 
 .whatsapp-button {
