@@ -255,19 +255,6 @@ export default function Certidoes() {
           Corregedoria Geral da Justiça e demais normas aplicáveis.
         </p>
       </section>
-
-      <div className="whatsapp-contact">
-        <p>Para solicitar certidões ou esclarecer dúvidas, entre em contato:</p>
-        <a
-          href="https://wa.me/5521991633030"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="whatsapp-button"
-        >
-          <img src="/src/assets/images/whatsapp.png" alt="WhatsApp" />
-          <span>(21) 99163-3030</span>
-        </a>
-      </div>
     </>
   );
 }

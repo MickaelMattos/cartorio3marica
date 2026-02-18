@@ -217,19 +217,6 @@ export default function Averbacoes() {
           Código de Normas da Corregedoria Geral da Justiça e legislação específica aplicável.
         </p>
       </section>
-
-      <div className="whatsapp-contact">
-        <p>Para informações específicas sobre seu caso, entre em contato:</p>
-        <a
-          href="https://wa.me/5521991633030"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="whatsapp-button"
-        >
-          <img src="/src/assets/images/whatsapp.png" alt="WhatsApp" />
-          <span>(21) 99163-3030</span>
-        </a>
-      </div>
     </>
   );
 }

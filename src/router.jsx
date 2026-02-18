@@ -30,6 +30,7 @@ import Identidade from "./pages/Identidade";
 import LGPD from "./pages/LGPD";
 import LinksUteis from "./pages/LinksUteis";
 import Contato from "./pages/Contato";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -39,15 +40,15 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
 
       {
-        path: "RCPN",
+        path: "rcpn",
         element: <RCPN />,
         children: [
           { index: true, element: <RcpnIndex /> },
-          { path: "nascimento", element: <Nascimento /> },
-          { path: "casamento", element: <Casamento /> },
-          { path: "obito", element: <Obito /> },
-          { path: "averbacoes", element: <Averbacoes /> },
-          { path: "certidoes", element: <Certidoes /> }
+          { path: "nascimento",  element: <Nascimento /> },
+          { path: "casamento",   element: <Casamento /> },
+          { path: "obito",       element: <Obito /> },
+          { path: "averbacoes",  element: <Averbacoes /> },
+          { path: "certidoes",   element: <Certidoes /> },
         ]
       },
 
@@ -56,21 +57,24 @@ const router = createBrowserRouter([
         element: <Notas />,
         children: [
           { index: true, element: <NotasIndex /> },
-          { path: "apostilahaia", element: <ApostilaHAIA /> },
-          { path: "Autenticacao", element: <Autenticacao /> },
-          { path: "Escrituras", element: <Escrituras /> },
-          { path: "Inventario", element: <Inventario /> },
-          { path: "procuracao", element: <Procuracao /> },
+          { path: "apostilahaia",        element: <ApostilaHAIA /> },
+          { path: "autenticacao",        element: <Autenticacao /> },  // ← era "Autenticacao" (maiúscula) — BUG 4 corrigido
+          { path: "escrituras",          element: <Escrituras /> },     // ← era "Escrituras"
+          { path: "inventario",          element: <Inventario /> },     // ← era "Inventario"
+          { path: "procuracao",          element: <Procuracao /> },
           { path: "reconhecimentofirma", element: <ReconhecimentoFirma /> },
-          { path: "testamento", element: <Testamento /> },
-          { path: "usucapiao", element: <Usucapiao /> }
+          { path: "testamento",          element: <Testamento /> },
+          { path: "usucapiao",           element: <Usucapiao /> },
         ]
       },
 
-      { path: "identidade", element: <Identidade /> },
-      { path: "lgpd", element: <LGPD /> },
-      { path: "links-uteis", element: <LinksUteis /> },
-      { path: "contato", element: <Contato /> }
+      { path: "identidade",   element: <Identidade /> },
+      { path: "lgpd",         element: <LGPD /> },
+      { path: "links-uteis",  element: <LinksUteis /> },
+      { path: "contato",      element: <Contato /> },
+
+      // Rota 404 — qualquer URL não mapeada
+      { path: "*", element: <NotFound /> },
     ]
   }
 ]);

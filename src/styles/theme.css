@@ -2,23 +2,195 @@
 :root {
   --bg-page: #f0f0f0;
   --bg-card: #ffffff;
+  --bg-section: #ffffff;
+  --bg-nav: #2e2e2e;           /* Header/Footer — sempre #2e2e2e */
   --text-primary: #1f2f2b;
-  --text-secondary: #444;
+  --text-secondary: #444444;
+  --text-light: #555555;
+  --text-muted: #888888;
   --border-color: #e0e0e0;
   --accent: #bfa76a;
+  --accent-rgb: 191, 167, 106;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --input-bg: #ffffff;
+  --input-border: #dddddd;
+  --submenu-bg: #ffffff;
+  --submenu-text: #1f2f2b;
+  --highlight-bg: rgba(191, 167, 106, 0.08);
+  --success-bg: #e8f8f0;
+  --warning-bg: #fff7f0;
+  --info-bg: #e8f4f8;
+  --table-header-bg: #f8f8f8;
+  --table-border: #dddddd;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #aaaaaa;
 }
 
 /* ================= TEMA ESCURO ================= */
 [data-theme="dark"] {
-  --bg-page: #121212;
-  --bg-card: #1f2f2b;
-  --text-primary: #eaeaea;
-  --text-secondary: #cfcfcf;
-  --border-color: #2e3e3a;
-  --accent: #bfa76a;
+  --bg-page: #2e2e2e;
+  --bg-card: #2e2e2e;          /* Card = página — sem sobra clara */
+  --bg-section: #363636;       /* Sections levemente elevadas */
+  --bg-nav: #2e2e2e;
+  --text-primary: #f5f5f5;     /* Muito legível */
+  --text-secondary: #e0e0e0;   /* Era #d0d0d0 — mais vivo */
+  --text-light: #cccccc;       /* Era #b8b8b8 */
+  --text-muted: #aaaaaa;       /* Era #909090 */
+  --border-color: #505050;
+  --accent: #bfa76a;           /* DOURADO — NUNCA MUDA */
+  --accent-rgb: 191, 167, 106;
+  --shadow: rgba(0, 0, 0, 0.0);/* Sem sombra — card e fundo iguais */
+  --input-bg: #3e3e3e;
+  --input-border: #606060;
+  --submenu-bg: #383838;
+  --submenu-text: #f5f5f5;
+  --highlight-bg: rgba(191, 167, 106, 0.13);
+  --success-bg: #1a2e22;
+  --warning-bg: #2e2014;
+  --info-bg: #162030;
+  --table-header-bg: #3a3a3a;
+  --table-border: #505050;
+  --scrollbar-track: #2e2e2e;
+  --scrollbar-thumb: #606060;
 }
 
-/* TRANSIÇÃO GLOBAL */
-* {
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* ============ TRANSIÇÃO GLOBAL SUAVE ============ */
+*, *::before, *::after {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+/* ============ BODY ============ */
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
+
+/* ============ HEADER — sempre #2e2e2e ============ */
+.site-header {
+  background-color: #2e2e2e !important;
+}
+
+/* ============ MAIN CONTAINER ============ */
+.app-main {
+  background-color: var(--bg-page);
+  padding: 40px 20px;
+  min-height: calc(100vh - 200px);
+}
+
+.app-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: var(--bg-card);
+  border-radius: 6px;
+  padding: 40px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .app-main { padding: 24px 12px; }
+  .app-container { padding: 24px 16px; border-radius: 4px; }
+}
+
+@media (max-width: 480px) {
+  .app-main { padding: 16px 8px; }
+  .app-container { padding: 16px 12px; }
+}
+
+/* ============ FOOTER — sempre #2e2e2e ============ */
+.footer {
+  background-color: #2e2e2e !important;
+}
+
+.footer-bottom {
+  background-color: #222222 !important;
+}
+
+/* ============ MENU SUBMENU ============ */
+.submenu {
+  background: var(--submenu-bg) !important;
+}
+
+.submenu a {
+  color: var(--submenu-text) !important;
+}
+
+[data-theme="dark"] .submenu a:hover {
+  background: rgba(191, 167, 106, 0.18) !important;
+}
+
+/* ============ SECTIONS E CARDS ============ */
+.content-section {
+  background: var(--bg-section) !important;
+  color: var(--text-primary);
+}
+
+.content-section p {
+  color: var(--text-secondary);
+}
+
+.content-section li {
+  color: var(--text-secondary);
+}
+
+.content-section li strong {
+  color: var(--text-primary);
+}
+
+/* ============ CAIXAS COLORIDAS ============ */
+.highlight-box {
+  background: var(--highlight-bg) !important;
+}
+
+.highlight-box p {
+  color: var(--text-primary) !important;
+}
+
+.success-box  { background: var(--success-bg) !important; }
+.warning-box  { background: var(--warning-bg) !important; }
+.info-box     { background: var(--info-bg) !important; }
+
+/* ============ CARDS DA HOME ============ */
+[data-theme="dark"] .home-hero-card {
+  background-color: var(--bg-section) !important;
+}
+
+[data-theme="dark"] .hero-image-side::before {
+  background: linear-gradient(to right, var(--bg-section), transparent) !important;
+}
+
+[data-theme="dark"] .hero-list li {
+  color: var(--text-secondary) !important;
+}
+
+/* ============ INPUTS E FORMS ============ */
+input, textarea, select {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--text-primary);
+}
+
+/* ============ NAV-ITEM (Links Úteis e Home) ============ */
+[data-theme="dark"] .nav-item {
+  color: var(--text-primary);
+  border-color: rgba(191, 167, 106, 0.35);
+  background: rgba(191, 167, 106, 0.05);
+}
+
+/* ============ TABELAS ============ */
+th {
+  background-color: var(--table-header-bg);
+  color: var(--text-primary);
+}
+
+th, td {
+  border-bottom-color: var(--table-border);
+  color: var(--text-primary);
+}
+
+/* ============ SCROLLBAR ============ */
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); }

@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #1f2f2b;
+  background-color: #2e2e2e;
   border-bottom: 5px solid rgb(191, 167, 106);
   z-index: 1000;
   transition: all 0.3s ease;
@@ -40,6 +40,54 @@
 
 .header-title {
   transition: font-size 0.3s ease;
+}
+
+/* ========================================
+   CONTROLES DO HEADER (tema + menu)
+   ======================================== */
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ========================================
+   BOTÃO DE TEMA CLARO / ESCURO
+   ======================================== */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(191, 167, 106, 0.4);
+  border-radius: 50%;
+  color: rgb(191, 167, 106);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  /* Sobrescrever o transform do polish.css para este botão específico */
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.theme-toggle:hover {
+  background: rgba(191, 167, 106, 0.2);
+  border-color: rgb(191, 167, 106);
+  transform: rotate(20deg) !important;
+  box-shadow: 0 0 12px rgba(191, 167, 106, 0.25) !important;
+}
+
+.theme-toggle:active {
+  transform: scale(0.9) !important;
+}
+
+.theme-toggle svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 /* ESTADO APÓS SCROLL */
@@ -79,6 +127,16 @@
   .site-header.scrolled .header-brand {
     font-size: 14px;
   }
+
+  .theme-toggle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .theme-toggle svg {
+    width: 17px;
+    height: 17px;
+  }
 }
 
 /* ========================================
@@ -110,6 +168,20 @@
 
   .site-header.scrolled .header-brand {
     font-size: 13px;
+  }
+
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .theme-toggle svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header-controls {
+    gap: 10px;
   }
 }
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cartorio3marica.com.br/sitemap.xml

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/cookie-banner.css";
 
 export default function CookieBanner() {
@@ -19,7 +20,7 @@ export default function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className="cookie-banner">
+    <div className="cookie-banner" role="dialog" aria-label="Aviso de cookies">
       <div className="cookie-content">
         <p>
           Utilizamos cookies essenciais para garantir o correto funcionamento
@@ -33,9 +34,10 @@ export default function CookieBanner() {
             Aceitar
           </button>
 
-          <a href="/lgpd">
+          {/* Link ao invés de <a href> para não recarregar o SPA */}
+          <Link to="/lgpd">
             Saiba mais
-          </a>
+          </Link>
         </div>
       </div>
     </div>

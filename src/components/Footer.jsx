@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeContext";
 import "../styles/footer.css";
 import sslIcon from "../assets/images/ssl.png";
@@ -7,6 +8,7 @@ import googleIcon from "../assets/images/google.png";
 
 export default function Footer() {
   const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <footer className="footer">
 
@@ -22,15 +24,15 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* LINKS RÁPIDOS */}
+        {/* LINKS RÁPIDOS — usando <Link> para não recarregar a página */}
         <div className="footer-column">
           <h4>Serviços</h4>
           <ul>
-            <li><a href="/rcpn">Registro Civil</a></li>
-            <li><a href="/notas">Tabelionato de Notas</a></li>
-            <li><a href="/identidade">Carteira de Identidade</a></li>
-            <li><a href="/links-uteis">Links Úteis</a></li>
-            <li><a href="/lgpd">LGPD</a></li>
+            <li><Link to="/rcpn">Registro Civil</Link></li>
+            <li><Link to="/notas">Tabelionato de Notas</Link></li>
+            <li><Link to="/identidade">Carteira de Identidade</Link></li>
+            <li><Link to="/links-uteis">Links Úteis</Link></li>
+            <li><Link to="/lgpd">LGPD</Link></li>
           </ul>
         </div>
 
@@ -39,7 +41,7 @@ export default function Footer() {
           <h4>Contato</h4>
           <p>
             Avenida Gilberto de Carvalho, Lote C-25<br />
-            Inoã – Maricá/RJ<br />
+            Inoã — Maricá/RJ<br />
             CEP: 24944-000
           </p>
           <p>
@@ -63,7 +65,7 @@ export default function Footer() {
 
             <div>
               <img src={shieldIcon} alt="Proteção de dados" />
-              <span>Proteção de Dados – LGPD</span>
+              <span>Proteção de Dados — LGPD</span>
             </div>
 
             <div>
