@@ -81,6 +81,7 @@
   padding: 14px;
   font-size: 13px;
   color: #cfcfcf;
+  position: relative; /* necessário para o link interno ficar posicionado no canto */
 }
 
 /* ========================================

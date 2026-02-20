@@ -32,6 +32,9 @@ import LinksUteis from "./pages/LinksUteis";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 
+// INTERNO — não aparece em nenhum menu
+import Financeiro from "./pages/Financeiro";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -58,9 +61,9 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <NotasIndex /> },
           { path: "apostilahaia",        element: <ApostilaHAIA /> },
-          { path: "autenticacao",        element: <Autenticacao /> },  // ← era "Autenticacao" (maiúscula) — BUG 4 corrigido
-          { path: "escrituras",          element: <Escrituras /> },     // ← era "Escrituras"
-          { path: "inventario",          element: <Inventario /> },     // ← era "Inventario"
+          { path: "autenticacao",        element: <Autenticacao /> },
+          { path: "escrituras",          element: <Escrituras /> },
+          { path: "inventario",          element: <Inventario /> },
           { path: "procuracao",          element: <Procuracao /> },
           { path: "reconhecimentofirma", element: <ReconhecimentoFirma /> },
           { path: "testamento",          element: <Testamento /> },
@@ -73,7 +76,13 @@ const router = createBrowserRouter([
       { path: "links-uteis",  element: <LinksUteis /> },
       { path: "contato",      element: <Contato /> },
 
-      // Rota 404 — qualquer URL não mapeada
+      // ── PAINEL INTERNO ──────────────────────────────────────────
+      // URL oculta — não listada em nenhum menu, não indexada pelo Google.
+      // Acesse digitando diretamente: /gestao-interna-cartorio
+      // Troque o nome da rota para algo que só você saiba.
+      { path: "gestao-interna-cartorio", element: <Financeiro /> },
+
+      // Rota 404
       { path: "*", element: <NotFound /> },
     ]
   }

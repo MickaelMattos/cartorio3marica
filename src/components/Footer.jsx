@@ -24,7 +24,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* LINKS RÁPIDOS — usando <Link> para não recarregar a página */}
+        {/* LINKS RÁPIDOS */}
         <div className="footer-column">
           <h4>Serviços</h4>
           <ul>
@@ -77,9 +77,45 @@ export default function Footer() {
 
       </div>
 
-      {/* BARRA FINAL */}
+      {/* BARRA FINAL — link interno discreto no canto direito */}
       <div className="footer-bottom">
-        © {new Date().getFullYear()} Cartório do 3º Distrito de Maricá-RJ — Todos os direitos reservados
+
+        <span>
+          © {new Date().getFullYear()} Cartório do 3º Distrito de Maricá-RJ — Todos os direitos reservados
+        </span>
+
+        {/*
+          Link discreto para o painel interno.
+          - Cor quase igual ao fundo: invisível para visitantes comuns
+          - Sem texto que chame atenção: apenas um "·"
+          - aria-hidden: leitores de tela ignoram
+          - tabIndex="-1": não aparece na navegação por teclado
+        */}
+        <Link
+          to="/gestao-interna-cartorio"
+          aria-hidden="true"
+          tabIndex="-1"
+          style={{
+            color: "#ffffff",
+            fontSize: "10px",
+            userSelect: "none",
+            opacity: 0,
+            position: "absolute",
+            right: "16px",
+            bottom: "14px",
+            padding: "4px 8px",
+            borderRadius: "4px",
+            transition: "opacity 0.3s ease",
+          }}
+          onMouseEnter={e => e.currentTarget.style.opacity = "1"}
+          onMouseLeave={e => e.currentTarget.style.opacity = "0"}
+          onFocus={e => e.currentTarget.style.opacity = "1"}
+          onBlur={e => e.currentTarget.style.opacity = "0"}
+          title="Gestão"
+        >
+          Gestão Financeira
+        </Link>
+
       </div>
 
     </footer>
