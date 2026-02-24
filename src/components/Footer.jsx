@@ -24,15 +24,24 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* LINKS RÁPIDOS */}
+        {/* SERVIÇOS */}
         <div className="footer-column">
           <h4>Serviços</h4>
           <ul>
             <li><Link to="/rcpn">Registro Civil</Link></li>
             <li><Link to="/notas">Tabelionato de Notas</Link></li>
             <li><Link to="/identidade">Carteira de Identidade</Link></li>
-            <li><Link to="/links-uteis">Links Úteis</Link></li>
+          </ul>
+        </div>
+
+        {/* INSTITUCIONAL — LGPD e Links Úteis aqui */}
+        <div className="footer-column">
+          <h4>Institucional</h4>
+          <ul>
+            <li><Link to="/sobre">Sobre o Cartório</Link></li>
+            <li><Link to="/contato">Contato</Link></li>
             <li><Link to="/lgpd">LGPD</Link></li>
+            <li><Link to="/links-uteis">Links Úteis</Link></li>
           </ul>
         </div>
 
@@ -53,69 +62,28 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* SEGURANÇA */}
-        <div className="footer-column">
-          <h4>Segurança do Site</h4>
-
-          <div className="security-icons">
-            <div>
-              <img src={sslIcon} alt="Site com conexão segura SSL" />
-              <span>Conexão Segura (HTTPS)</span>
-            </div>
-
-            <div>
-              <img src={shieldIcon} alt="Proteção de dados" />
-              <span>Proteção de Dados — LGPD</span>
-            </div>
-
-            <div>
-              <img src={googleIcon} alt="Google Safe Browsing" />
-              <span>Verificado pelo Google</span>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      {/* BARRA FINAL — link interno discreto no canto direito */}
+      {/* BARRA FINAL — copyright + ícones de segurança */}
       <div className="footer-bottom">
-
         <span>
           © {new Date().getFullYear()} Cartório do 3º Distrito de Maricá-RJ — Todos os direitos reservados
         </span>
 
-        {/*
-          Link discreto para o painel interno.
-          - Cor quase igual ao fundo: invisível para visitantes comuns
-          - Sem texto que chame atenção: apenas um "·"
-          - aria-hidden: leitores de tela ignoram
-          - tabIndex="-1": não aparece na navegação por teclado
-        */}
-        <Link
-          to="/gestao-interna-cartorio"
-          aria-hidden="true"
-          tabIndex="-1"
-          style={{
-            color: "#ffffff",
-            fontSize: "10px",
-            userSelect: "none",
-            opacity: 0,
-            position: "absolute",
-            right: "16px",
-            bottom: "14px",
-            padding: "4px 8px",
-            borderRadius: "4px",
-            transition: "opacity 0.3s ease",
-          }}
-          onMouseEnter={e => e.currentTarget.style.opacity = "1"}
-          onMouseLeave={e => e.currentTarget.style.opacity = "0"}
-          onFocus={e => e.currentTarget.style.opacity = "1"}
-          onBlur={e => e.currentTarget.style.opacity = "0"}
-          title="Gestão"
-        >
-          Gestão Financeira
-        </Link>
-
+        <div className="footer-bottom-security">
+          <div>
+            <img src={sslIcon} alt="Conexão segura SSL" />
+            <span>HTTPS</span>
+          </div>
+          <div>
+            <img src={shieldIcon} alt="Proteção de dados LGPD" />
+            <span>LGPD</span>
+          </div>
+          <div>
+            <img src={googleIcon} alt="Verificado pelo Google" />
+            <span>Google</span>
+          </div>
+        </div>
       </div>
 
     </footer>

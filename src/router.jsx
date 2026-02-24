@@ -27,12 +27,13 @@ import Usucapiao from "./pages/Notas/Usucapiao";
 
 // OUTRAS
 import Identidade from "./pages/Identidade";
+import Sobre from "./pages/Sobre";
 import LGPD from "./pages/LGPD";
 import LinksUteis from "./pages/LinksUteis";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 
-// INTERNO — não aparece em nenhum menu
+// INTERNO — não aparece no menu público
 import Financeiro from "./pages/Financeiro";
 
 const router = createBrowserRouter([
@@ -72,17 +73,15 @@ const router = createBrowserRouter([
       },
 
       { path: "identidade",   element: <Identidade /> },
+      { path: "sobre",        element: <Sobre /> },
       { path: "lgpd",         element: <LGPD /> },
       { path: "links-uteis",  element: <LinksUteis /> },
       { path: "contato",      element: <Contato /> },
 
-      // ── PAINEL INTERNO ──────────────────────────────────────────
-      // URL oculta — não listada em nenhum menu, não indexada pelo Google.
-      // Acesse digitando diretamente: /gestao-interna-cartorio
-      // Troque o nome da rota para algo que só você saiba.
+      // Painel interno — URL oculta, sem link no menu público
       { path: "gestao-interna-cartorio", element: <Financeiro /> },
 
-      // Rota 404
+      // 404
       { path: "*", element: <NotFound /> },
     ]
   }

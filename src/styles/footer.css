@@ -77,11 +77,51 @@
 
 .footer-bottom {
   background-color: #222222;
-  text-align: center;
-  padding: 14px;
+  padding: 14px 20px;
   font-size: 13px;
   color: #cfcfcf;
-  position: relative; /* necessário para o link interno ficar posicionado no canto */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-bottom-security {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.footer-bottom-security div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.footer-bottom-security div:hover {
+  opacity: 1;
+}
+
+.footer-bottom-security img {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.footer-bottom-security span {
+  font-size: 11px;
+  color: #cfcfcf;
+}
+
+@media (max-width: 600px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* ========================================

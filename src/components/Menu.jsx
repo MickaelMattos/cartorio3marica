@@ -16,7 +16,7 @@ export default function Menu() {
 
   return (
     <>
-      {/* BOTÃO HAMBURGER — aria-expanded correto para leitores de tela */}
+      {/* BOTÃO HAMBURGER */}
       <button
         className={`hamburger ${isOpen ? "active" : ""}`}
         onClick={toggleMenu}
@@ -67,12 +67,12 @@ export default function Menu() {
             className={`submenu ${rcpnOpen ? "open" : ""}`}
             role="menu"
           >
-            <NavLink to="/rcpn"                onClick={closeMenu} role="menuitem">Introdução</NavLink>
-            <NavLink to="/rcpn/nascimento"     onClick={closeMenu} role="menuitem">Nascimento</NavLink>
-            <NavLink to="/rcpn/casamento"      onClick={closeMenu} role="menuitem">Casamento</NavLink>
-            <NavLink to="/rcpn/obito"          onClick={closeMenu} role="menuitem">Óbito</NavLink>
-            <NavLink to="/rcpn/averbacoes"     onClick={closeMenu} role="menuitem">Averbações e Anotações</NavLink>
-            <NavLink to="/rcpn/certidoes"      onClick={closeMenu} role="menuitem">Certidões</NavLink>
+            <NavLink to="/rcpn"               onClick={closeMenu} role="menuitem">Introdução</NavLink>
+            <NavLink to="/rcpn/nascimento"    onClick={closeMenu} role="menuitem">Nascimento</NavLink>
+            <NavLink to="/rcpn/casamento"     onClick={closeMenu} role="menuitem">Casamento</NavLink>
+            <NavLink to="/rcpn/obito"         onClick={closeMenu} role="menuitem">Óbito</NavLink>
+            <NavLink to="/rcpn/averbacoes"    onClick={closeMenu} role="menuitem">Averbações e Anotações</NavLink>
+            <NavLink to="/rcpn/certidoes"     onClick={closeMenu} role="menuitem">Certidões</NavLink>
           </div>
         </div>
 
@@ -106,10 +106,11 @@ export default function Menu() {
           </div>
         </div>
 
-        <NavLink to="/identidade"   className="menu-link" onClick={closeMenu}>2ª Via de Identidade</NavLink>
-        <NavLink to="/lgpd"         className="menu-link" onClick={closeMenu}>LGPD</NavLink>
-        <NavLink to="/links-uteis"  className="menu-link" onClick={closeMenu}>Links Úteis</NavLink>
-        <NavLink to="/contato"      className="menu-link" onClick={closeMenu}>Contato</NavLink>
+        <NavLink to="/identidade"  className="menu-link" onClick={closeMenu}>2ª Via de Identidade</NavLink>
+        <NavLink to="/sobre"       className="menu-link" onClick={closeMenu}>Sobre</NavLink>
+        <NavLink to="/lgpd"        className="menu-link" onClick={closeMenu}>LGPD</NavLink>
+        <NavLink to="/links-uteis" className="menu-link" onClick={closeMenu}>Links Úteis</NavLink>
+        <NavLink to="/contato"     className="menu-link" onClick={closeMenu}>Contato</NavLink>
 
       </nav>
     </>
