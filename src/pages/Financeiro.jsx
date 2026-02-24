@@ -5,7 +5,7 @@ import React, { useState, useEffect, useCallback } from "react";
    ================================================================ */
 
 // 1. Cole aqui a URL gerada pelo Google Apps Script
-const SHEETS_API_URL = "https://script.google.com/macros/s/AKfycbwGKA4jWEaeO4LW5SKXJIf5EPXQ5SEIZZeGoyuJvSvxF4-P2e9k1YMNg6Hn_uwNJEFusw/exec";
+const SHEETS_API_URL = "https://script.google.com/macros/s/AKfycbxmOn3Yzq2tPvf_g7R6WKeEaxkE-IlhHonhGMrY_NmAoMfJwuql4TTGHKbQf59ICHew/exec";
 
 // 2. Cole aqui sua chave pública do reCAPTCHA v2
 //    Obtenha em: https://www.google.com/recaptcha/admin/create
