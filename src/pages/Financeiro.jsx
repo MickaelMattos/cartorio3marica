@@ -9,7 +9,7 @@ const SHEETS_API_URL = "https://script.google.com/macros/s/AKfycbxmOn3Yzq2tPvf_g
 
 // 2. Cole aqui sua chave pública do reCAPTCHA v2
 //    Obtenha em: https://www.google.com/recaptcha/admin/create
-const RECAPTCHA_SITE_KEY = "6LcAx3UsAAAAANilgvH4RWZQ2eJ-mcDrnF8G0dQx";
+const RECAPTCHA_SITE_KEY = "6LeyfnYsAAAAAKI9wmFEEMHu1udw8X39Cemai9f_";
 
 /* ================================================================ */
 
