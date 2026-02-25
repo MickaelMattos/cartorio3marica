@@ -87,13 +87,13 @@ export default function Sobre() {
           Este cartório acredita que uma gestão íntegra começa pela transparência
           com a sociedade. Atuamos em conformidade com os princípios da administração
           pública, com ética e responsabilidade em todas as nossas ações. Por isso,
-          mantemos o acompanhamento rigoroso de nossa{" "}
+          mantemos o acompanhamento rigoroso de nossa gestão financeira, onde pode ser acompanhado clicando {" "}
           <Link
             to="/gestao-interna-cartorio"
             style={{ color: "inherit", textDecoration: "none" }}
             title="Gestão interna"
           >
-            gestão financeira
+            aqui
           </Link>
           , assegurando o uso responsável dos recursos e a qualidade contínua dos
           serviços prestados à população.

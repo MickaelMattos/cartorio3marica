@@ -23,55 +23,6 @@ function fmt(valor) {
   }).format(valor || 0);
 }
 
-/* ── GRÁFICO DE BARRAS SVG ── */
-function GraficoBarras({ dados, ano }) {
-  if (!dados || dados.length === 0) return null;
-  const max = Math.max(...dados.map(d => d.total), 1);
-  const H = 180;
-
-  return (
-    <div style={{ overflowX: "auto" }}>
-      <svg
-        viewBox={`0 0 ${dados.length * 52} ${H + 48}`}
-        style={{ width: "100%", minWidth: `${dados.length * 52}px`, display: "block" }}
-      >
-        {[0.25, 0.5, 0.75, 1].map(p => (
-          <line key={p}
-            x1="0" y1={H - H * p}
-            x2={dados.length * 52} y2={H - H * p}
-            stroke="rgba(191,167,106,0.12)" strokeWidth="1" strokeDasharray="4,4"
-          />
-        ))}
-        {dados.map((d, i) => {
-          const x = i * 52 + 8;
-          return (
-            <g key={i}>
-              <rect x={x}      y={H - (d.rcpn       / max) * H} width="10" height={Math.max((d.rcpn       / max) * H, 1)} fill="rgba(191,167,106,0.7)" rx="2" />
-              <rect x={x + 12} y={H - (d.notas      / max) * H} width="10" height={Math.max((d.notas      / max) * H, 1)} fill="rgba(191,167,106,1)"   rx="2" />
-              <rect x={x + 24} y={H - (d.identidade / max) * H} width="10" height={Math.max((d.identidade / max) * H, 1)} fill="rgba(191,167,106,0.4)" rx="2" />
-              <text x={x + 17} y={H + 16} textAnchor="middle" fontSize="11" fill="var(--text-muted, #888)">
-                {MESES[d.mes - 1]}
-              </text>
-            </g>
-          );
-        })}
-      </svg>
-      <div style={{ display: "flex", gap: "20px", justifyContent: "center", marginTop: "8px", flexWrap: "wrap" }}>
-        {[
-          { cor: "rgba(191,167,106,0.7)", label: "RCPN" },
-          { cor: "rgba(191,167,106,1)",   label: "Notas" },
-          { cor: "rgba(191,167,106,0.4)", label: "Identidade" },
-        ].map(l => (
-          <div key={l.label} style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "12px", color: "var(--text-muted, #888)" }}>
-            <div style={{ width: 10, height: 10, background: l.cor, borderRadius: 2 }} />
-            {l.label}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 /* ── GRÁFICO ROSCA SVG ── */
 function GraficoPizza({ rcpn, notas, identidade }) {
   const total = (rcpn || 0) + (notas || 0) + (identidade || 0);
@@ -129,20 +80,18 @@ function GraficoPizza({ rcpn, notas, identidade }) {
 }
 
 /* ── CARD KPI ── */
-function KpiCard({ titulo, valor, variacao, cor }) {
-  const positivo = variacao >= 0;
+function KpiCard({ titulo, valor, subtitulo, cor }) {
   return (
     <div style={estilos.kpiCard}>
       <div style={{ fontSize: "12px", fontWeight: 600, letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--text-muted, #888)", marginBottom: 8 }}>
         {titulo}
       </div>
-      <div style={{ fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 700, color: cor || "var(--accent, #bfa76a)", letterSpacing: "-0.5px" }}>
+      <div style={{ fontSize: "clamp(20px, 3vw, 26px)", fontWeight: 700, color: cor || "var(--accent, #bfa76a)", letterSpacing: "-0.5px" }}>
         {valor}
       </div>
-      {variacao !== undefined && (
-        <div style={{ fontSize: "12px", color: positivo ? "#27ae60" : "#e74c3c", marginTop: 6, display: "flex", alignItems: "center", gap: 4 }}>
-          <span>{positivo ? "▲" : "▼"}</span>
-          <span>{Math.abs(variacao).toFixed(1)}% vs mês anterior</span>
+      {subtitulo && (
+        <div style={{ fontSize: "13px", color: "var(--text-muted, #888)", marginTop: 5 }}>
+          {subtitulo}
         </div>
       )}
     </div>
@@ -282,19 +231,19 @@ export default function Financeiro() {
   }, [autenticado, buscarDados]);
 
   /* ── Cálculos ── */
-  const dadosAno     = dados.filter(d => d.ano === anoSelecionado);
-  const anos         = [...new Set(dados.map(d => d.ano))].sort((a, b) => b - a);
-  const mesAtual     = dadosAno.find(d => d.mes === new Date().getMonth() + 1) || {};
-  const mesAnterior  = dadosAno.find(d => d.mes === new Date().getMonth())     || {};
-  const variacaoTotal = mesAnterior.total
-    ? ((mesAtual.total - mesAnterior.total) / mesAnterior.total) * 100
-    : undefined;
-  const totalAno       = dadosAno.reduce((s, d) => s + (d.total      || 0), 0);
-  const totalRcpn      = dadosAno.reduce((s, d) => s + (d.rcpn       || 0), 0);
-  const totalNotas     = dadosAno.reduce((s, d) => s + (d.notas      || 0), 0);
-  const totalIdentidade= dadosAno.reduce((s, d) => s + (d.identidade || 0), 0);
-  const mediaMensal    = dadosAno.length > 0 ? totalAno / dadosAno.length : 0;
-  const melhorMes      = dadosAno.reduce((m, d) => d.total > (m.total || 0) ? d : m, {});
+  const dadosAno        = dados.filter(d => d.ano === anoSelecionado);
+  const anos            = [...new Set(dados.map(d => d.ano))].sort((a, b) => b - a);
+  const totalAno        = dadosAno.reduce((s, d) => s + (d.total      || 0), 0);
+  const totalRcpn       = dadosAno.reduce((s, d) => s + (d.rcpn       || 0), 0);
+  const totalNotas      = dadosAno.reduce((s, d) => s + (d.notas      || 0), 0);
+  const totalIdentidade = dadosAno.reduce((s, d) => s + (d.identidade || 0), 0);
+  const mediaMensal     = dadosAno.length > 0 ? totalAno / dadosAno.length : 0;
+  const melhorMes       = dadosAno.reduce((m, d) => d.total > (m.total || 0) ? d : m, {});
+  const piorMes         = dadosAno.reduce((m, d) => {
+    // ignora meses com total zero (mês ainda sem dados)
+    if (!d.total) return m;
+    return (!m.total || d.total < m.total) ? d : m;
+  }, {});
 
   /* ── Tela de verificação ── */
   if (!autenticado) {
@@ -370,64 +319,83 @@ export default function Financeiro() {
       {/* DASHBOARD */}
       {!carregandoDados && dadosAno.length > 0 && (
         <>
+          {/* KPIs */}
           <div style={estilos.kpiGrid}>
-            <KpiCard titulo={`Mês atual — ${MESES_FULL[new Date().getMonth()]}`} valor={fmt(mesAtual.total)} variacao={variacaoTotal} />
-            <KpiCard titulo={`Total ${anoSelecionado}`} valor={fmt(totalAno)} />
-            <KpiCard titulo="Média mensal"  valor={fmt(mediaMensal)} />
-            <KpiCard titulo="Melhor mês"    valor={melhorMes.mes ? MESES_FULL[melhorMes.mes - 1] : "—"} cor="var(--text-primary, #333)" />
+            <KpiCard
+              titulo={`Melhor mês — ${anoSelecionado}`}
+              valor={melhorMes.mes ? MESES_FULL[melhorMes.mes - 1] : "—"}
+              subtitulo={melhorMes.total ? fmt(melhorMes.total) : ""}
+              cor="var(--accent, #bfa76a)"
+            />
+            <KpiCard
+              titulo={`Pior mês — ${anoSelecionado}`}
+              valor={piorMes.mes ? MESES_FULL[piorMes.mes - 1] : "—"}
+              subtitulo={piorMes.total ? fmt(piorMes.total) : ""}
+              cor="var(--text-primary, #333)"
+            />
+            <KpiCard
+              titulo={`Média mensal — ${anoSelecionado}`}
+              valor={fmt(mediaMensal)}
+            />
+            <KpiCard
+              titulo={`Total ${anoSelecionado}`}
+              valor={fmt(totalAno)}
+            />
           </div>
 
+          {/* TABELA + PIZZA lado a lado */}
           <div style={estilos.chartsRow}>
-            <div style={estilos.chartCard}>
-              <h3 style={estilos.chartTitulo}>Evolução Mensal — {anoSelecionado}</h3>
-              <GraficoBarras dados={dadosAno} ano={anoSelecionado} />
+
+            {/* TABELA */}
+            <div style={{ ...estilos.tabelaCard, flex: "1 1 380px", marginBottom: 0 }}>
+              <h3 style={estilos.chartTitulo}>Detalhamento Mensal — {anoSelecionado}</h3>
+              <div style={{ overflowX: "auto" }}>
+                <table style={estilos.tabela}>
+                  <thead>
+                    <tr>
+                      {["Mês","RCPN","Notas","Identidade","Total"].map(h => (
+                        <th key={h} style={estilos.th}>{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {dadosAno.map((d, i) => (
+                      <tr key={i} style={d.mes === new Date().getMonth() + 1 ? estilos.trDestaque : estilos.tr}>
+                        <td style={estilos.td}>
+                          <strong style={{ color: "var(--accent, #bfa76a)" }}>
+                            {MESES_FULL[d.mes - 1]}
+                            {d.mes === new Date().getMonth() + 1 && (
+                              <span style={{ fontSize: "10px", marginLeft: "6px", opacity: 0.7 }}>(atual)</span>
+                            )}
+                          </strong>
+                        </td>
+                        <td style={estilos.td}>{fmt(d.rcpn)}</td>
+                        <td style={estilos.td}>{fmt(d.notas)}</td>
+                        <td style={estilos.td}>{fmt(d.identidade)}</td>
+                        <td style={{ ...estilos.td, fontWeight: 700, color: "var(--accent, #bfa76a)" }}>{fmt(d.total)}</td>
+                      </tr>
+                    ))}
+                    <tr style={estilos.trTotal}>
+                      <td style={{ ...estilos.td, fontWeight: 700 }}>TOTAL {anoSelecionado}</td>
+                      <td style={estilos.td}>{fmt(totalRcpn)}</td>
+                      <td style={estilos.td}>{fmt(totalNotas)}</td>
+                      <td style={estilos.td}>{fmt(totalIdentidade)}</td>
+                      <td style={{ ...estilos.td, fontWeight: 700, color: "var(--accent, #bfa76a)", fontSize: "16px" }}>{fmt(totalAno)}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div style={{ ...estilos.chartCard, minWidth: "260px", flex: "0 0 auto" }}>
+
+            {/* PIZZA */}
+            <div style={{ ...estilos.chartCard, minWidth: "280px", flex: "0 0 auto", alignSelf: "flex-start" }}>
               <h3 style={estilos.chartTitulo}>Divisão por Setor — {anoSelecionado}</h3>
               <GraficoPizza rcpn={totalRcpn} notas={totalNotas} identidade={totalIdentidade} />
             </div>
+
           </div>
 
-          <div style={estilos.tabelaCard}>
-            <h3 style={estilos.chartTitulo}>Detalhamento Mensal — {anoSelecionado}</h3>
-            <div style={{ overflowX: "auto" }}>
-              <table style={estilos.tabela}>
-                <thead>
-                  <tr>
-                    {["Mês","RCPN","Notas","Identidade","Total"].map(h => (
-                      <th key={h} style={estilos.th}>{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {dadosAno.map((d, i) => (
-                    <tr key={i} style={d.mes === new Date().getMonth() + 1 ? estilos.trDestaque : estilos.tr}>
-                      <td style={estilos.td}>
-                        <strong style={{ color: "var(--accent, #bfa76a)" }}>
-                          {MESES_FULL[d.mes - 1]}
-                          {d.mes === new Date().getMonth() + 1 && (
-                            <span style={{ fontSize: "10px", marginLeft: "6px", opacity: 0.7 }}>(atual)</span>
-                          )}
-                        </strong>
-                      </td>
-                      <td style={estilos.td}>{fmt(d.rcpn)}</td>
-                      <td style={estilos.td}>{fmt(d.notas)}</td>
-                      <td style={estilos.td}>{fmt(d.identidade)}</td>
-                      <td style={{ ...estilos.td, fontWeight: 700, color: "var(--accent, #bfa76a)" }}>{fmt(d.total)}</td>
-                    </tr>
-                  ))}
-                  <tr style={estilos.trTotal}>
-                    <td style={{ ...estilos.td, fontWeight: 700 }}>TOTAL {anoSelecionado}</td>
-                    <td style={estilos.td}>{fmt(totalRcpn)}</td>
-                    <td style={estilos.td}>{fmt(totalNotas)}</td>
-                    <td style={estilos.td}>{fmt(totalIdentidade)}</td>
-                    <td style={{ ...estilos.td, fontWeight: 700, color: "var(--accent, #bfa76a)", fontSize: "16px" }}>{fmt(totalAno)}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
+          {/* OBSERVAÇÕES */}
           {dadosAno.some(d => d.observacao) && (
             <div style={estilos.tabelaCard}>
               <h3 style={estilos.chartTitulo}>Observações</h3>
