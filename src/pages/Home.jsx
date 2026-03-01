@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 import "../styles/pages-clean.css";
 import rcpnImg from "../assets/images/RCPN.png";
 import notasImg from "../assets/images/NOTAS.png";
