@@ -1,45 +1,51 @@
-import React, { useState, useEffect, useRef } from "react";
-import "../styles/pages-clean.css";
+import React, { useState, useEffect, useRef } from 'react'
+import SEO from '../components/SEO'
+import '../styles/pages-clean.css'
 
 /* ── IMPORTS DAS IMAGENS ── */
-import prefeituraImg       from "../assets/images/prefeitura.png";
-import detranImg           from "../assets/images/detran.png";
-import correiosImg         from "../assets/images/buscacep.png";
-import tjrjImg             from "../assets/images/tjrj.png";
-import extrajudicialImg    from "../assets/images/extrajudicial.png";
-import oabImg              from "../assets/images/oab.png";
-import treImg              from "../assets/images/tre.png";
-import cpfImg              from "../assets/images/cpf.png";
-import cnjImg              from "../assets/images/cnj.png";
-import arpenImg            from "../assets/images/arpen.png";
-import registrocivilImg    from "../assets/images/registrocivil.png";
-import govImg              from "../assets/images/gov.png";
+import prefeituraImg from '../assets/images/prefeitura.png'
+import detranImg from '../assets/images/detran.png'
+import correiosImg from '../assets/images/buscacep.png'
+import tjrjImg from '../assets/images/tjrj.png'
+import extrajudicialImg from '../assets/images/extrajudicial.png'
+import oabImg from '../assets/images/oab.png'
+import treImg from '../assets/images/tre.png'
+import cpfImg from '../assets/images/cpf.png'
+import cnjImg from '../assets/images/cnj.png'
+import arpenImg from '../assets/images/arpen.png'
+import registrocivilImg from '../assets/images/registrocivil.png'
+import govImg from '../assets/images/gov.png'
 
 /* ── IMPORTS DOS PDFs ── */
-import declaracaoPdf              from "../assets/formularios/declaracao-residencia.pdf";
-import autorizacaoPdf             from "../assets/formularios/autorizacao-viagem.pdf";
-import requerimentoCertidaoPdf    from "../assets/formularios/requerimento-de-certidao.pdf";
-import requerimentoInteiroTeorPdf from "../assets/formularios/requerimento-de-certidao-inteiroteor.pdf";
-import formularioRetificacaoPdf   from "../assets/formularios/formulario-de-retificacao.pdf";
-import reconhecimentoEspontaneoPdf from "../assets/formularios/reconhecimento-espontaneo.pdf";
-import procuracaoFarmaciaPdf      from "../assets/formularios/procuracao-farmacia.pdf";
-import declaracaoHipossuficienciaPdf from "../assets/formularios/declacacao-de-hipossuficiencia.pdf";
+import declaracaoPdf from '../assets/formularios/declaracao-residencia.pdf'
+import autorizacaoPdf from '../assets/formularios/autorizacao-viagem.pdf'
+import requerimentoCertidaoPdf from '../assets/formularios/requerimento-de-certidao.pdf'
+import requerimentoInteiroTeorPdf from '../assets/formularios/requerimento-de-certidao-inteiroteor.pdf'
+import formularioRetificacaoPdf from '../assets/formularios/formulario-de-retificacao.pdf'
+import reconhecimentoEspontaneoPdf from '../assets/formularios/reconhecimento-espontaneo.pdf'
+import procuracaoFarmaciaPdf from '../assets/formularios/procuracao-farmacia.pdf'
+import declaracaoHipossuficienciaPdf from '../assets/formularios/declacacao-de-hipossuficiencia.pdf'
 
 /* ── IMPORTS DAS IMAGENS DOS FORMULÁRIOS ── */
-import declaracaoImg              from "../assets/images/declaracao-residencia.png";
-import autorizacaoImg             from "../assets/images/autorizacao-viagem.png";
-import requerimentoCertidaoImg    from "../assets/images/requerimento-de-certidao.png";
-import requerimentoInteiroTeorImg from "../assets/images/requerimento-de-certidao-inteiroteor.png";
-import formularioRetificacaoImg   from "../assets/images/formulario-de-retificacao.png";
-import reconhecimentoEspontaneoImg from "../assets/images/reconhecimento-espontaneo.png";
-import procuracaoFarmaciaImg      from "../assets/images/procuracao-farmacia.png";
-import declaracaoHipossuficienciaImg from "../assets/images/declacacao-de-hipossuficiencia.png";
+import declaracaoImg from '../assets/images/declaracao-residencia.png'
+import autorizacaoImg from '../assets/images/autorizacao-viagem.png'
+import requerimentoCertidaoImg from '../assets/images/requerimento-de-certidao.png'
+import requerimentoInteiroTeorImg from '../assets/images/requerimento-de-certidao-inteiroteor.png'
+import formularioRetificacaoImg from '../assets/images/formulario-de-retificacao.png'
+import reconhecimentoEspontaneoImg from '../assets/images/reconhecimento-espontaneo.png'
+import procuracaoFarmaciaImg from '../assets/images/procuracao-farmacia.png'
+import declaracaoHipossuficienciaImg from '../assets/images/declacacao-de-hipossuficiencia.png'
 
 /* ================================================================ */
 
 export default function LinksUteis() {
   return (
     <>
+      <SEO
+        title="Links Úteis"
+        description="Links úteis do Cartório do 3º Distrito de Maricá-RJ. Acesse portais do governo, TJRJ, Detran, Receita Federal, OAB e outros serviços públicos essenciais."
+        path="/links-uteis"
+      />
       <style>{`
 
         /* ── ANIMAÇÃO FADE-IN POR SCROLL ── */
@@ -190,18 +196,78 @@ export default function LinksUteis() {
         <section className="content-section">
           <h2 className="section-title">Órgãos e Serviços Oficiais</h2>
           <div className="lu-grid">
-            <AnimatedCard href="http://www.marica.rj.gov.br/"                  img={prefeituraImg}    title="Prefeitura de Maricá"         delay={0}   />
-            <AnimatedCard href="http://www.detran.rj.gov.br/"                  img={detranImg}        title="Detran-RJ"                    delay={50}  />
-            <AnimatedCard href="http://www.buscacep.correios.com.br/"           img={correiosImg}      title="Busca CEP"                    delay={100} />
-            <AnimatedCard href="http://www.tjrj.jus.br/"                       img={tjrjImg}          title="Tribunal de Justiça do RJ"    delay={150} />
-            <AnimatedCard href="http://cgj.tjrj.jus.br/portal-extrajudicial"   img={extrajudicialImg} title="Portal Extrajudicial"         delay={200} />
-            <AnimatedCard href="http://www.oabrj.org.br/"                      img={oabImg}           title="OAB RJ"                       delay={250} />
-            <AnimatedCard href="http://www.tre-rj.jus.br/"                     img={treImg}           title="TRE - RJ"                     delay={300} />
-            <AnimatedCard href="https://servicos.receita.fazenda.gov.br/"       img={cpfImg}           title="2ª Via do CPF"                delay={350} />
-            <AnimatedCard href="https://www.cnj.jus.br"                        img={cnjImg}           title="CNJ"                          delay={400} />
-            <AnimatedCard href="https://registrocivil.org.br"                  img={registrocivilImg} title="Registro Civil Nacional"      delay={450} />
-            <AnimatedCard href="https://arpenbrasil.org.br"                    img={arpenImg}         title="ARPEN Brasil"                 delay={500} />
-            <AnimatedCard href="https://www.gov.br"                            img={govImg}           title="Portal Gov.br"                delay={550} />
+            <AnimatedCard
+              href="http://www.marica.rj.gov.br/"
+              img={prefeituraImg}
+              title="Prefeitura de Maricá"
+              delay={0}
+            />
+            <AnimatedCard
+              href="http://www.detran.rj.gov.br/"
+              img={detranImg}
+              title="Detran-RJ"
+              delay={50}
+            />
+            <AnimatedCard
+              href="http://www.buscacep.correios.com.br/"
+              img={correiosImg}
+              title="Busca CEP"
+              delay={100}
+            />
+            <AnimatedCard
+              href="http://www.tjrj.jus.br/"
+              img={tjrjImg}
+              title="Tribunal de Justiça do RJ"
+              delay={150}
+            />
+            <AnimatedCard
+              href="http://cgj.tjrj.jus.br/portal-extrajudicial"
+              img={extrajudicialImg}
+              title="Portal Extrajudicial"
+              delay={200}
+            />
+            <AnimatedCard
+              href="http://www.oabrj.org.br/"
+              img={oabImg}
+              title="OAB RJ"
+              delay={250}
+            />
+            <AnimatedCard
+              href="http://www.tre-rj.jus.br/"
+              img={treImg}
+              title="TRE - RJ"
+              delay={300}
+            />
+            <AnimatedCard
+              href="https://servicos.receita.fazenda.gov.br/"
+              img={cpfImg}
+              title="2ª Via do CPF"
+              delay={350}
+            />
+            <AnimatedCard
+              href="https://www.cnj.jus.br"
+              img={cnjImg}
+              title="CNJ"
+              delay={400}
+            />
+            <AnimatedCard
+              href="https://registrocivil.org.br"
+              img={registrocivilImg}
+              title="Registro Civil Nacional"
+              delay={450}
+            />
+            <AnimatedCard
+              href="https://arpenbrasil.org.br"
+              img={arpenImg}
+              title="ARPEN Brasil"
+              delay={500}
+            />
+            <AnimatedCard
+              href="https://www.gov.br"
+              img={govImg}
+              title="Portal Gov.br"
+              delay={550}
+            />
           </div>
         </section>
 
@@ -209,20 +275,67 @@ export default function LinksUteis() {
         <section className="content-section">
           <h2 className="section-title">Formulários</h2>
           <div className="lu-grid">
-            <AnimatedCard href={declaracaoPdf}              img={declaracaoImg}              title="Declaração de Residência"                          badge="PDF" delay={0}   />
-            <AnimatedCard href={autorizacaoPdf}             img={autorizacaoImg}             title="Autorização de Viagem"                             badge="PDF" delay={60}  />
-            <AnimatedCard href={requerimentoCertidaoPdf}    img={requerimentoCertidaoImg}    title="Requerimento de Certidão"                          badge="PDF" delay={120} />
-            <AnimatedCard href={requerimentoInteiroTeorPdf} img={requerimentoInteiroTeorImg} title="Requerimento de Certidão em Inteiro Teor"          badge="PDF" delay={180} />
-            <AnimatedCard href={formularioRetificacaoPdf}   img={formularioRetificacaoImg}   title="Formulário de Retificação"                         badge="PDF" delay={240} />
-            <AnimatedCard href={reconhecimentoEspontaneoPdf} img={reconhecimentoEspontaneoImg} title="Termo de Reconhecimento Espontâneo de Filho(a)"  badge="PDF" delay={300} />
-            <AnimatedCard href={procuracaoFarmaciaPdf}      img={procuracaoFarmaciaImg}      title="Procuração – Programa Farmácia Popular"            badge="PDF" delay={360} />
-            <AnimatedCard href={declaracaoHipossuficienciaPdf} img={declaracaoHipossuficienciaImg} title="Declaração de Hipossuficiência"              badge="PDF" delay={420} />
+            <AnimatedCard
+              href={declaracaoPdf}
+              img={declaracaoImg}
+              title="Declaração de Residência"
+              badge="PDF"
+              delay={0}
+            />
+            <AnimatedCard
+              href={autorizacaoPdf}
+              img={autorizacaoImg}
+              title="Autorização de Viagem"
+              badge="PDF"
+              delay={60}
+            />
+            <AnimatedCard
+              href={requerimentoCertidaoPdf}
+              img={requerimentoCertidaoImg}
+              title="Requerimento de Certidão"
+              badge="PDF"
+              delay={120}
+            />
+            <AnimatedCard
+              href={requerimentoInteiroTeorPdf}
+              img={requerimentoInteiroTeorImg}
+              title="Requerimento de Certidão em Inteiro Teor"
+              badge="PDF"
+              delay={180}
+            />
+            <AnimatedCard
+              href={formularioRetificacaoPdf}
+              img={formularioRetificacaoImg}
+              title="Formulário de Retificação"
+              badge="PDF"
+              delay={240}
+            />
+            <AnimatedCard
+              href={reconhecimentoEspontaneoPdf}
+              img={reconhecimentoEspontaneoImg}
+              title="Termo de Reconhecimento Espontâneo de Filho(a)"
+              badge="PDF"
+              delay={300}
+            />
+            <AnimatedCard
+              href={procuracaoFarmaciaPdf}
+              img={procuracaoFarmaciaImg}
+              title="Procuração – Programa Farmácia Popular"
+              badge="PDF"
+              delay={360}
+            />
+            <AnimatedCard
+              href={declaracaoHipossuficienciaPdf}
+              img={declaracaoHipossuficienciaImg}
+              title="Declaração de Hipossuficiência"
+              badge="PDF"
+              delay={420}
+            />
           </div>
         </section>
-
       </div>
     </>
-  );
+  )
 }
 
 /* ================================================================
@@ -231,47 +344,37 @@ export default function LinksUteis() {
    – Hover com elevação + linha dourada + zoom na imagem
 ================================================================ */
 function AnimatedCard({ href, img, title, badge, delay = 0 }) {
-  const ref = useRef(null);
+  const ref = useRef(null)
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    const el = ref.current
+    if (!el) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => el.classList.add("visible"), delay);
-          observer.disconnect();
+          setTimeout(() => el.classList.add('visible'), delay)
+          observer.disconnect()
         }
       },
-      { threshold: 0.1 }
-    );
+      { threshold: 0.1 },
+    )
 
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [delay]);
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [delay])
 
   return (
     <div ref={ref} className="lu-card-wrap">
-      <a
-        href={href}
-        target="_blank"
-        rel="noreferrer"
-        className="lu-card"
-      >
+      <a href={href} target="_blank" rel="noreferrer" className="lu-card">
         {badge && <span className="lu-badge">{badge}</span>}
 
-        <img
-          src={img}
-          alt={title}
-          className="lu-card-img"
-          loading="lazy"
-        />
+        <img src={img} alt={title} className="lu-card-img" loading="lazy" />
 
         <h3 className="lu-card-title">{title}</h3>
 
         <span className="lu-card-arrow">↗</span>
       </a>
     </div>
-  );
+  )
 }

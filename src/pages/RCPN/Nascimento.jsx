@@ -1,14 +1,21 @@
-import React from "react";
+import React from 'react'
+import SEO from '../../components/SEO'
 
 export default function Nascimento() {
   return (
     <>
+      <SEO
+        title="Registro de Nascimento"
+        description="Registre um nascimento gratuitamente no Cartório do 3º Distrito de Maricá-RJ. Prazos, documentos necessários e procedimentos para o registro de nascimento em Inoã."
+        path="/rcpn/nascimento"
+      />
       <section className="content-section">
         <h2 className="section-title">Gratuidade</h2>
         <div className="success-box">
           <p>
-            <strong>Importante:</strong> O registro de nascimento, bem como a primeira certidão, 
-            são <strong>GRATUITOS</strong>, conforme a legislação vigente.
+            <strong>Importante:</strong> O registro de nascimento, bem como a
+            primeira certidão, são <strong>GRATUITOS</strong>, conforme a
+            legislação vigente.
           </p>
         </div>
       </section>
@@ -29,7 +36,7 @@ export default function Nascimento() {
 
         <div className="info-box">
           <p>
-            O registro pode ser feito no Serviço de Registro Civil da área onde 
+            O registro pode ser feito no Serviço de Registro Civil da área onde
             ocorreu o nascimento ou da área de residência dos pais.
           </p>
         </div>
@@ -78,8 +85,10 @@ export default function Nascimento() {
       </section>
 
       <section className="content-section">
-        <h2 className="section-title">Pais Não Casados ou Sem Certidão de Casamento</h2>
-        
+        <h2 className="section-title">
+          Pais Não Casados ou Sem Certidão de Casamento
+        </h2>
+
         <h3 className="section-subtitle">Comparecimento do Pai</h3>
         <ul>
           <li>Documento de Identificação próprio (original)</li>
@@ -87,8 +96,8 @@ export default function Nascimento() {
           <li>Documento de Identificação da mãe (original)</li>
         </ul>
         <p>
-          O funcionário do Cartório poderá exigir o comparecimento da mãe
-          quando julgar necessário para esclarecimentos.
+          O funcionário do Cartório poderá exigir o comparecimento da mãe quando
+          julgar necessário para esclarecimentos.
         </p>
 
         <h3 className="section-subtitle">Comparecimento da Mãe</h3>
@@ -137,9 +146,7 @@ export default function Nascimento() {
             Tradicionalmente o sobrenome paterno vem por último, mas não há
             obrigatoriedade
           </li>
-          <li>
-            Não é permitido criar sobrenomes novos ou estranhos à família
-          </li>
+          <li>Não é permitido criar sobrenomes novos ou estranhos à família</li>
         </ul>
       </section>
 
@@ -147,8 +154,8 @@ export default function Nascimento() {
         <h2 className="section-title">Registro de CPF</h2>
         <div className="highlight-box">
           <p>
-            Os registros de nascimento já incluem automaticamente a inscrição
-            do <strong>CPF</strong> da criança.
+            Os registros de nascimento já incluem automaticamente a inscrição do{' '}
+            <strong>CPF</strong> da criança.
           </p>
         </div>
       </section>
@@ -166,5 +173,5 @@ export default function Nascimento() {
         </p>
       </section>
     </>
-  );
+  )
 }

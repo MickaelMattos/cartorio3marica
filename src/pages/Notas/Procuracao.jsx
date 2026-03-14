@@ -1,45 +1,67 @@
-import React from "react";
+import React from 'react'
+import SEO from '../../components/SEO'
 
 export default function Procuracao() {
   return (
     <>
+      <SEO
+        title="Procuração"
+        description="Registre procurações públicas no Cartório do 3º Distrito de Maricá-RJ. Procuração pública por instrumento, revogação, substabelecimento e muito mais em Inoã."
+        path="/notas/procuracao"
+      />
       <section className="content-section">
         <h2 className="section-title">O que é Procuração Pública</h2>
         <p>
           A procuração pública é instrumento jurídico de mandato lavrado em
-          Cartório de Notas (Tabelionato), dotado de fé pública, pelo qual
-          uma pessoa (outorgante/mandante) confere poderes a outra
+          Cartório de Notas (Tabelionato), dotado de fé pública, pelo qual uma
+          pessoa (outorgante/mandante) confere poderes a outra
           (outorgado/mandatário/procurador) para representá-la na prática de
           atos jurídicos específicos.
         </p>
         <p>
-          Diferencia-se da procuração particular por ser elaborada perante
-          o tabelião, conferindo maior segurança jurídica, autenticidade e
-          força probante ao ato.
+          Diferencia-se da procuração particular por ser elaborada perante o
+          tabelião, conferindo maior segurança jurídica, autenticidade e força
+          probante ao ato.
         </p>
       </section>
 
       <section className="content-section">
         <h2 className="section-title">Características da Procuração Pública</h2>
         <ul>
-          <li><strong>Fé Pública:</strong> O tabelião atesta identidade, capacidade civil e autenticidade das assinaturas.</li>
-          <li><strong>Força Probante:</strong> Presunção de veracidade e autenticidade.</li>
-          <li><strong>Obrigatoriedade Legal:</strong> Exigida para determinados atos, como venda de imóveis e representação matrimonial.</li>
+          <li>
+            <strong>Fé Pública:</strong> O tabelião atesta identidade,
+            capacidade civil e autenticidade das assinaturas.
+          </li>
+          <li>
+            <strong>Força Probante:</strong> Presunção de veracidade e
+            autenticidade.
+          </li>
+          <li>
+            <strong>Obrigatoriedade Legal:</strong> Exigida para determinados
+            atos, como venda de imóveis e representação matrimonial.
+          </li>
         </ul>
       </section>
 
       <section className="content-section">
         <h2 className="section-title">Tipos de Procuração Pública</h2>
         <ul>
-          <li><strong>Ad Judicia:</strong> Representação em processos judiciais.</li>
-          <li><strong>Ad Negotia:</strong> Negócios e transações extrajudiciais.</li>
-          <li><strong>Mista:</strong> Combinação de poderes judiciais e extrajudiciais.</li>
+          <li>
+            <strong>Ad Judicia:</strong> Representação em processos judiciais.
+          </li>
+          <li>
+            <strong>Ad Negotia:</strong> Negócios e transações extrajudiciais.
+          </li>
+          <li>
+            <strong>Mista:</strong> Combinação de poderes judiciais e
+            extrajudiciais.
+          </li>
         </ul>
       </section>
 
       <section className="content-section">
         <h2 className="section-title">Principais Finalidades</h2>
-        
+
         <h3 className="section-subtitle">Negócios Imobiliários</h3>
         <ul>
           <li>Compra, venda e permuta de imóveis</li>
@@ -65,8 +87,10 @@ export default function Procuracao() {
       <section className="content-section">
         <h2 className="section-title">Requisitos Fundamentais do Outorgante</h2>
         <div className="warning-box">
-          <p><strong>Importante:</strong> O outorgante deve ter capacidade civil plena e lucidez. 
-          Não se lavra procuração de pessoa não lúcida.</p>
+          <p>
+            <strong>Importante:</strong> O outorgante deve ter capacidade civil
+            plena e lucidez. Não se lavra procuração de pessoa não lúcida.
+          </p>
         </div>
 
         <h3 className="section-subtitle">Documentação Necessária</h3>
@@ -81,9 +105,7 @@ export default function Procuracao() {
       <section className="content-section">
         <h2 className="section-title">Poderes Especiais</h2>
         <div className="highlight-box">
-          <p>
-            Os seguintes poderes exigem menção expressa na procuração:
-          </p>
+          <p>Os seguintes poderes exigem menção expressa na procuração:</p>
         </div>
         <ul>
           <li>Venda ou permuta de imóveis</li>
@@ -114,13 +136,10 @@ export default function Procuracao() {
           rel="noopener noreferrer"
           className="whatsapp-button"
         >
-          <img
-            src="/src/assets/images/whatsapp.png"
-            alt="WhatsApp"
-          />
+          <img src="/src/assets/images/whatsapp.png" alt="WhatsApp" />
           <span>(21) 99163-3030</span>
         </a>
       </div>
     </>
-  );
+  )
 }
