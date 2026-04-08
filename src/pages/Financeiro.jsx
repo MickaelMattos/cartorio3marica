@@ -1,17 +1,19 @@
 import React, { useState, useEffect, useCallback } from "react";
 
 export default function Financeiro() {
-   useEffect(() {
-      const header = documento.querySelector('header');
-         if (header){
-            header.style.display = 'none';
-   }
-             return () {
-      if (header){
-         header.style.display = '';
+  // ✅ CORREÇÃO: document (não documento) + arrow function completa
+  useEffect(() => {
+    const header = document.querySelector('header'); // ou '.site-header', '.navbar', etc
+    if (header) {
+      header.style.display = 'none';
+    }
+    
+    return () => { // ✅ Faltava a seta =>
+      if (header) {
+        header.style.display = '';
       }
-   };
-},[]);
+    };
+  }, []);
 
 /* ================================================================
    CONFIGURAÇÕES — EDITE APENAS ESTE BLOCO
