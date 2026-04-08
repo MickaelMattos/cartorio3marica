@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 
 export default function Financeiro() {
    useEffect(() {
-      const header = documento.querySelector('header');{
+      const header = documento.querySelector('header');
          if (header){
             header.style.display = 'none';
    }
