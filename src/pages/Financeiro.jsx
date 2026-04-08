@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from "react";
 
-export default function FInanceiro() {
+export default function Financeiro() {
    useEffect(() {
-      const header = documento.querySelector('if(header){
-                                             header.style.display = 'none';
+      const header = documento.querySelector('header');{
+         if (header){
+            header.style.display = 'none';
    }
              return () {
       if (header){
