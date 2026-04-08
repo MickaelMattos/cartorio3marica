@@ -1,5 +1,17 @@
 import React, { useState, useEffect, useCallback } from "react";
 
+export default function FInanceiro() {
+   useEffect(() {
+      const header = documento.querySelector('if(header){
+                                             header.style.display = 'none';
+   }
+             return () {
+      if (header){
+         header.style.display = '';
+      }
+   };
+},[]);
+
 /* ================================================================
    CONFIGURAÇÕES — EDITE APENAS ESTE BLOCO
    ================================================================ */
