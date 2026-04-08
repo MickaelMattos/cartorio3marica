@@ -6,7 +6,7 @@ echo   DEPLOY AUTOMATICO GITHUB
 echo ==============================
 echo.
 
-set /p mensagem=Digite a mensagem do commit: 
+set /p mensagem=Digite a mensagem do commit:
 
 if "%mensagem%"=="" (
     echo.
