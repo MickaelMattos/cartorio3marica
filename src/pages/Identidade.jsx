@@ -1,37 +1,56 @@
-import React, { useEffect } from "react";
-import "../styles/pages-clean.css";
+import React, { useEffect } from 'react'
+import '../styles/pages-clean.css'
+import SEO from '../components/SEO'
 
 export default function Identidade() {
-
   useEffect(() => {
-    const reveals = document.querySelectorAll(".reveal");
+    const reveals = document.querySelectorAll('.reveal')
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("active");
-        });
+          if (entry.isIntersecting) entry.target.classList.add('active')
+        })
       },
-      { threshold: 0.15 }
-    );
-    reveals.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+      { threshold: 0.15 },
+    )
+    reveals.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <div className="rcpn-page">
-
+      <SEO
+        title="Carteira de Identidade"
+        description="Emita ou renove sua Carteira de Identidade no Cartório do 3º Distrito de Maricá-RJ. Documentos necessários, agendamento e atendimento presencial em Inoã, Maricá/RJ."
+        path="/identidade"
+      />
       <h1 className="page-main-title reveal">
         Emissão da 2ª Via da Carteira de Identidade
       </h1>
 
       {/* APRESENTAÇÃO */}
-      <section className="content-section reveal" style={{ textAlign: "center" }}>
-        <p style={{ fontSize: "18px", lineHeight: 1.7, color: "var(--text-secondary)", marginBottom: "16px" }}>
+      <section
+        className="content-section reveal"
+        style={{ textAlign: 'center' }}
+      >
+        <p
+          style={{
+            fontSize: '18px',
+            lineHeight: 1.7,
+            color: 'var(--text-secondary)',
+            marginBottom: '16px',
+          }}
+        >
           Atendimento para emissão de 2ª via do RG do Estado do Rio de Janeiro,
           sem agendamento, por ordem de chegada.
         </p>
-        <div className="highlight-box" style={{ display: "inline-block", textAlign: "left" }}>
-          <strong>📍 Avenida Gilberto Carvalho, Lote C25 – Vivendas, Maricá</strong>
+        <div
+          className="highlight-box"
+          style={{ display: 'inline-block', textAlign: 'left' }}
+        >
+          <strong>
+            📍 Avenida Gilberto Carvalho, Lote C25 – Vivendas, Maricá
+          </strong>
         </div>
       </section>
 
@@ -49,8 +68,12 @@ export default function Identidade() {
       <section className="content-section reveal">
         <h2 className="section-title">Horários e senhas</h2>
         <ul>
-          <li><strong>Manhã:</strong> 09h35 às 11h51 — 8 senhas</li>
-          <li><strong>Tarde:</strong> 13h15 às 16h56 — 13 senhas</li>
+          <li>
+            <strong>Manhã:</strong> 09h35 às 11h51 — 8 senhas
+          </li>
+          <li>
+            <strong>Tarde:</strong> 13h15 às 16h56 — 13 senhas
+          </li>
         </ul>
       </section>
 
@@ -69,8 +92,8 @@ export default function Identidade() {
       <section className="content-section reveal">
         <h2 className="section-title">Menores de 16 anos</h2>
         <p>
-          Devem estar acompanhados de pai, mãe ou responsável legal,
-          portando RG e CPF originais ou guarda definitiva.
+          Devem estar acompanhados de pai, mãe ou responsável legal, portando RG
+          e CPF originais ou guarda definitiva.
         </p>
       </section>
 
@@ -78,12 +101,16 @@ export default function Identidade() {
       <section className="content-section reveal">
         <h2 className="section-title">Valores</h2>
         <ul>
-          <li>Taxa de serviço do cartório: <strong>R$ 76,25</strong></li>
-          <li>DUDA (se necessário): <strong>R$ 55,95</strong></li>
+          <li>
+            Taxa de serviço do cartório: <strong>R$ 76,25</strong>
+          </li>
+          <li>
+            DUDA (se necessário): <strong>R$ 55,95</strong>
+          </li>
         </ul>
-        <div className="highlight-box" style={{ marginTop: "16px" }}>
-          <strong style={{ fontSize: "18px" }}>Total: R$ 132,20</strong>
-          <p style={{ margin: "8px 0 0" }}>
+        <div className="highlight-box" style={{ marginTop: '16px' }}>
+          <strong style={{ fontSize: '18px' }}>Total: R$ 132,20</strong>
+          <p style={{ margin: '8px 0 0' }}>
             Pagamento em dinheiro, débito ou PIX (conforme indicado).
           </p>
         </div>
@@ -93,7 +120,7 @@ export default function Identidade() {
       <section className="content-section reveal">
         <h2 className="section-title">Avisos importantes</h2>
         <div className="warning-box">
-          <ul style={{ margin: 0, paddingLeft: "20px" }}>
+          <ul style={{ margin: 0, paddingLeft: '20px' }}>
             <li>Dirija-se ao balcão ao chegar</li>
             <li>Esteja atento ao chamado da senha</li>
             <li>Acompanhantes somente nos casos permitidos</li>
@@ -108,15 +135,16 @@ export default function Identidade() {
       <section className="content-section reveal">
         <h2 className="section-title">Entrega e retirada</h2>
         <div className="success-box">
-          <p style={{ marginBottom: "8px" }}>
-            <strong>Previsão de entrega:</strong> aproximadamente 20 dias corridos.
+          <p style={{ marginBottom: '8px' }}>
+            <strong>Previsão de entrega:</strong> aproximadamente 20 dias
+            corridos.
           </p>
           <p style={{ margin: 0 }}>
-            <strong>Retirada:</strong> segunda a quinta-feira, das 13h00 às 16h00.
+            <strong>Retirada:</strong> segunda a quinta-feira, das 13h00 às
+            16h00.
           </p>
         </div>
       </section>
-
     </div>
-  );
+  )
 }

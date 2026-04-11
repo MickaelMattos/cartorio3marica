@@ -1,15 +1,21 @@
-import React from "react";
+import React from 'react'
+import SEO from '../../components/SEO'
 
 export default function NotasIndex() {
   return (
     <>
+      <SEO
+        title="Tabelionato de Notas"
+        description="Serviços notariais no Cartório do 3º Distrito de Maricá-RJ: escrituras, procurações, testamentos, inventário, reconhecimento de firma, autenticação e apostila de Haia."
+        path="/notas"
+      />
       <section className="content-section">
         <h2 className="section-title">Serviços Notariais</h2>
         <p>
-          Os serviços notariais garantem autenticidade, segurança jurídica e fé pública
-          aos atos praticados pelos cidadãos. No 3º RCPN e Notas de Maricá,
-          oferecemos atendimento técnico especializado para formalização de negócios,
-          declarações, escrituras e atos jurídicos em geral.
+          Os serviços notariais garantem autenticidade, segurança jurídica e fé
+          pública aos atos praticados pelos cidadãos. No 3º RCPN e Notas de
+          Maricá, oferecemos atendimento técnico especializado para formalização
+          de negócios, declarações, escrituras e atos jurídicos em geral.
         </p>
       </section>
 
@@ -17,8 +23,8 @@ export default function NotasIndex() {
         <h2 className="section-title">Abertura e Reconhecimento de Firma</h2>
         <p>
           Realizamos abertura de firma (cadastro de assinatura) e reconhecimento
-          por semelhança ou autenticidade. Serviço essencial para validade de contratos,
-          autorizações, transferências e documentos particulares.
+          por semelhança ou autenticidade. Serviço essencial para validade de
+          contratos, autorizações, transferências e documentos particulares.
         </p>
       </section>
 
@@ -43,36 +49,36 @@ export default function NotasIndex() {
       <section className="content-section">
         <h2 className="section-title">Usucapião Extrajudicial</h2>
         <p>
-          Regularize seu imóvel diretamente em cartório, sem necessidade de ação judicial,
-          desde que preenchidos os requisitos legais. Procedimento seguro,
-          técnico e com maior agilidade na regularização imobiliária.
+          Regularize seu imóvel diretamente em cartório, sem necessidade de ação
+          judicial, desde que preenchidos os requisitos legais. Procedimento
+          seguro, técnico e com maior agilidade na regularização imobiliária.
         </p>
       </section>
 
       <section className="content-section">
         <h2 className="section-title">Testamento</h2>
         <p>
-          O testamento público permite ao cidadão organizar a sucessão de seus bens
-          com segurança jurídica, respeitando os limites legais e evitando conflitos
-          futuros entre herdeiros.
+          O testamento público permite ao cidadão organizar a sucessão de seus
+          bens com segurança jurídica, respeitando os limites legais e evitando
+          conflitos futuros entre herdeiros.
         </p>
       </section>
 
       <section className="content-section">
         <h2 className="section-title">Inventário Extrajudicial</h2>
         <p>
-          O inventário em cartório possibilita a partilha de bens de forma rápida
-          e menos burocrática, quando houver consenso entre os herdeiros e assistência
-          de advogado.
+          O inventário em cartório possibilita a partilha de bens de forma
+          rápida e menos burocrática, quando houver consenso entre os herdeiros
+          e assistência de advogado.
         </p>
       </section>
 
       <section className="content-section">
         <h2 className="section-title">Procuração Pública</h2>
         <p>
-          A procuração pública formaliza a concessão de poderes para representação
-          em atos jurídicos, contratos, movimentações bancárias e negociações
-          imobiliárias, garantindo segurança e validade legal.
+          A procuração pública formaliza a concessão de poderes para
+          representação em atos jurídicos, contratos, movimentações bancárias e
+          negociações imobiliárias, garantindo segurança e validade legal.
         </p>
       </section>
 
@@ -85,5 +91,5 @@ export default function NotasIndex() {
         </p>
       </section>
     </>
-  );
+  )
 }

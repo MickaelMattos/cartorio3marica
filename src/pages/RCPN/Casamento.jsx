@@ -1,11 +1,19 @@
-import React from "react";
+import React from 'react'
+import SEO from '../../components/SEO'
 
 export default function Casamento() {
   return (
     <>
+      <SEO
+        title="Casamento"
+        description="Documentos e procedimentos para habilitação de casamento no Cartório do 3º Distrito de Maricá-RJ. Casamento civil, religioso com efeito civil e uniões estáveis em Inoã."
+        path="/rcpn/casamento"
+      />
       <section className="content-section">
-        <h2 className="section-title">Documentação Necessária para Habilitação de Casamento</h2>
-        
+        <h2 className="section-title">
+          Documentação Necessária para Habilitação de Casamento
+        </h2>
+
         <h3 className="section-subtitle">Quando Solteiros</h3>
         <ul>
           <li>Certidão de nascimento (em perfeito estado de conservação)</li>
@@ -28,7 +36,9 @@ export default function Casamento() {
       </section>
 
       <section className="content-section">
-        <h3 className="section-subtitle">Quando um ou Ambos Forem Divorciados</h3>
+        <h3 className="section-subtitle">
+          Quando um ou Ambos Forem Divorciados
+        </h3>
         <ul>
           <li>
             Certidão de casamento com averbação de divórcio atualizada (até 180
@@ -91,8 +101,8 @@ export default function Casamento() {
       <section className="content-section">
         <h2 className="section-title">Separação Obrigatória de Bens</h2>
         <p>
-          A separação obrigatória de bens aplica-se <strong>exclusivamente</strong> nos
-          seguintes casos:
+          A separação obrigatória de bens aplica-se{' '}
+          <strong>exclusivamente</strong> nos seguintes casos:
         </p>
         <ul>
           <li>
@@ -106,10 +116,10 @@ export default function Casamento() {
 
         <div className="highlight-box">
           <p>
-            <strong>Atenção:</strong> A regra de separação obrigatória para maiores
-            de 70 anos foi declarada <strong>inconstitucional</strong> pelo Supremo
-            Tribunal Federal (RE 646.721/RS). Assim, pessoas com 70 anos ou mais
-            podem escolher livremente qualquer regime de bens.
+            <strong>Atenção:</strong> A regra de separação obrigatória para
+            maiores de 70 anos foi declarada <strong>inconstitucional</strong>{' '}
+            pelo Supremo Tribunal Federal (RE 646.721/RS). Assim, pessoas com 70
+            anos ou mais podem escolher livremente qualquer regime de bens.
           </p>
         </div>
       </section>
@@ -118,8 +128,8 @@ export default function Casamento() {
         <h2 className="section-title">Formalização do Regime de Bens</h2>
         <ul>
           <li>
-            <strong>Comunhão Parcial de Bens:</strong> formalizada diretamente no
-            Registro Civil, sem necessidade de escritura pública
+            <strong>Comunhão Parcial de Bens:</strong> formalizada diretamente
+            no Registro Civil, sem necessidade de escritura pública
           </li>
           <li>
             <strong>Demais Regimes:</strong> exigem escritura pública de pacto
@@ -130,7 +140,9 @@ export default function Casamento() {
       </section>
 
       <section className="content-section">
-        <h2 className="section-title">Processo de Habilitação e Prazos Importantes</h2>
+        <h2 className="section-title">
+          Processo de Habilitação e Prazos Importantes
+        </h2>
         <ul>
           <li>
             <strong>Validade da habilitação:</strong> 90 dias após a conclusão
@@ -168,11 +180,12 @@ export default function Casamento() {
       <section className="content-section">
         <h2 className="section-title">Base Legal</h2>
         <p>
-          Lei nº 6.015/1973 (Lei de Registros Públicos), Código Civil Brasileiro,
-          Lei nº 13.811/2019, Provimentos do Conselho Nacional de Justiça e Código
-          de Normas da Corregedoria Geral da Justiça do Estado do Rio de Janeiro.
+          Lei nº 6.015/1973 (Lei de Registros Públicos), Código Civil
+          Brasileiro, Lei nº 13.811/2019, Provimentos do Conselho Nacional de
+          Justiça e Código de Normas da Corregedoria Geral da Justiça do Estado
+          do Rio de Janeiro.
         </p>
       </section>
     </>
-  );
+  )
 }
